@@ -140,8 +140,6 @@
 		F4EECF05177C99F400778578 = {
 			isa = PBXGroup;
 			children = (
-				F4EECF71177FE9BA00778578 /* MapKit.framework */,
-				F4EECF6F177FE9B400778578 /* CoreLocation.framework */,
 				F4EECF17177C99F400778578 /* SidebarDemo */,
 				F4EECF10177C99F400778578 /* Frameworks */,
 				F4EECF0F177C99F400778578 /* Products */,
@@ -159,6 +157,8 @@
 		F4EECF10177C99F400778578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4EECF71177FE9BA00778578 /* MapKit.framework */,
+				F4EECF6F177FE9B400778578 /* CoreLocation.framework */,
 				653CE9FD19F06B1600E9A3FD /* SystemConfiguration.framework */,
 				653CE9FB19F06B0C00E9A3FD /* StoreKit.framework */,
 				653CE9F919F06B0600E9A3FD /* Security.framework */,
