@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 
 @implementation AppDelegate
@@ -14,6 +15,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [Parse setApplicationId:@"SivszCydBjjlJftgNvj3I2eSMY8PtWd1g7qwwfLG"
+                  clientKey:@"7nNwl8ch40MBf4LusXkgE8q9jPm6Sux9i3UXjY2R"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     UIImage *navBackgroundImage = [UIImage imageNamed:@"nav_bg"];
     [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
