@@ -9,30 +9,32 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     
     [Parse setApplicationId:@"SivszCydBjjlJftgNvj3I2eSMY8PtWd1g7qwwfLG"
                   clientKey:@"7nNwl8ch40MBf4LusXkgE8q9jPm6Sux9i3UXjY2R"];
-    
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+     // Override point for customization after application launch.
+
+    // Change the background color of navigation bar
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.114 green:0.114 blue:0.114 alpha:1.0]];
     
-    UIImage *navBackgroundImage = [UIImage imageNamed:@"nav_bg"];
-    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
     
+    
+    // Change the font style of the navigation bar
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    shadow.shadowOffset = CGSizeMake(0, 0);
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor colorWithRed:10.0/255.0 green:10.0/255.0 blue:10.0/255.0 alpha:1.0], UITextAttributeTextColor,
-                                                           [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],UITextAttributeTextShadowColor,
-                                                           [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
-                                                           UITextAttributeTextShadowOffset,
-                                                           [UIFont fontWithName:@"Helvetica-Light" size:20.0], UITextAttributeFont, nil]];
-    
+                                                          [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"Kingthings_Exeter.ttf" size:21.0], NSFontAttributeName, nil]];
     return YES;
 }
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

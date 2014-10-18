@@ -8,9 +8,11 @@
 
 #import "MainViewController.h"
 #import "SWRevealViewController.h"
+#import <Parse/Parse.h>
+
 
 @interface MainViewController ()
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @end
 
 @implementation MainViewController
@@ -18,19 +20,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
+    self.navigationItem.title = @"Home";
 
-   
-    // Change button color
-    //_sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
     
+    UIColor *bgColour = [[UIColor alloc]initWithRed:68.0/255.0 green:68.0/255.0 blue:68.0/255.0 alpha:1.0];
+    self.view.backgroundColor = bgColour;
+    UIBarButtonItem* _sidebarButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
+                                                                       style:UIBarButtonItemStylePlain
+                                                                      target:self
+                                                                      action:@selector(infoButtonSelected:)];
+    self.navigationItem.leftBarButtonItem = _sidebarButton;
+
+    
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-
+    _sidebarButton.tintColor = [UIColor whiteColor];
+    /*
+    NSArray *farmFoodsArray = [[NSArray alloc] initWithObjects:@"Apples",@"Cider",@"Beef",nil];
+    PFObject *newFarm = [PFObject objectWithClassName:@"Farm"];
+    newFarm[@"farmName"] = @"Avalon Orchards";
+    newFarm[@"produce"] = farmFoodsArray;
+    newFarm[@"lat"] = @44.253888;
+    newFarm[@"long"] = @-79.646527;
+    [newFarm saveInBackground];
+     */
 
 }
 

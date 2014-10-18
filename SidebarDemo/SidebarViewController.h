@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SidebarViewController : UITableViewController
-
+@property (weak, nonatomic) IBOutlet UITableViewCell *logoutBtn;
 @end
