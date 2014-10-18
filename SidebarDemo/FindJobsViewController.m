@@ -18,6 +18,8 @@
 
 @implementation FindJobsViewController
 
+int scrollHeight = 0;  // Or any other default value.
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -41,13 +43,11 @@
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
     CGFloat screenWidth = screenSize.width;
-    CGFloat screenHeight = screenSize.height;
     
     //ref to the current view
     UIScrollView *mainScrollView = [[UIScrollView alloc] init];
     self.view = mainScrollView;
     [mainScrollView setScrollEnabled:YES];
-    int scrollHeight = 0;
     
     
     
@@ -58,14 +58,75 @@
             //create counter
             int counterInt = 0;
             for (PFObject *object in objects) {
-                counterInt+=1;
                 NSLog(@"Successfully retrieved %d objects.", objects.count);
-                scrollHeight+=(10+120*counterInt);
+                scrollHeight+=240;
                 
                 UIView *centerView = [[UIView alloc] init];
-                CGRect frame = CGRectMake(0, (10+120*counterInt), 400, 100);
-                centerView.frame = frame;
-                centerView.backgroundColor = [UIColor redColor];
+                if (counterInt == 0) {
+                    CGRect frame = CGRectMake(0, 0, 400, 150);
+                    centerView.frame = frame;
+                    centerView.backgroundColor = [UIColor redColor];
+                }
+                else{
+                    CGRect frame = CGRectMake(0, (180*counterInt), 400, 150);
+                    centerView.frame = frame;
+                    centerView.backgroundColor = [UIColor redColor];
+                }
+                counterInt+=1;
+                
+                //adding named label to new view
+                UILabel  * titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, 400, 50)];
+                titleLabel.backgroundColor = [UIColor clearColor];
+                titleLabel.textAlignment = UITextAlignmentLeft; // UITextAlignmentCenter, UITextAlignmentLeft
+                titleLabel.textColor=[UIColor whiteColor];
+                titleLabel.text = object[@"title"];
+                [titleLabel setFont:[UIFont systemFontOfSize:24]];
+                [centerView addSubview:titleLabel];
+                
+                //adding named label to new view
+                UILabel  * dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 120, 130, 30)];
+                dateLabel.backgroundColor = [UIColor clearColor];
+                dateLabel.textAlignment = UITextAlignmentLeft; // UITextAlignmentCenter, UITextAlignmentLeft
+                dateLabel.textColor=[UIColor whiteColor];
+                dateLabel.text = object[@"date"];
+                [centerView addSubview:dateLabel];
+                
+                //adding named label to new view
+                UILabel  * startTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 90, 160, 50)];
+                startTimeLabel.backgroundColor = [UIColor clearColor];
+                startTimeLabel.textAlignment = UITextAlignmentLeft; // UITextAlignmentCenter, UITextAlignmentLeft
+                startTimeLabel.textColor=[UIColor whiteColor];
+                startTimeLabel.text = object[@"startTime"];
+                [centerView addSubview:startTimeLabel];
+                
+                //adding named label to new view
+                UILabel  * numHoursLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 1, 50)];
+                numHoursLabel.backgroundColor = [UIColor clearColor];
+                numHoursLabel.textAlignment = UITextAlignmentLeft; // UITextAlignmentCenter, UITextAlignmentLeft
+                numHoursLabel.textColor=[UIColor whiteColor];
+                numHoursLabel.text = object[@"numofHours"];
+                [centerView addSubview:numHoursLabel];
+                
+                //adding named label to new view
+                UILabel * addressLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 400, 50)];
+                addressLabel.backgroundColor = [UIColor clearColor];
+                addressLabel.textAlignment = UITextAlignmentLeft; // UITextAlignmentCenter, UITextAlignmentLeft
+                addressLabel.textColor=[UIColor whiteColor];
+                addressLabel.text = object[@"address"];
+                [centerView addSubview:addressLabel];
+                
+                UIButton *acceptBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+                [acceptBtn addTarget:self
+                           action:@selector(aMethod:)
+                 forControlEvents:UIControlEventTouchUpInside];
+                [acceptBtn setTitle:@"Accept Job" forState:UIControlStateNormal];
+                acceptBtn.frame = CGRectMake(220, 110, 100, 40);
+                UIColor *bgColour =[[UIColor alloc]initWithRed:46.0/255.0 green:204.0/255.0 blue:113.0/255.0 alpha:1.0];
+                acceptBtn.backgroundColor=bgColour;
+                [acceptBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                [centerView addSubview:acceptBtn];
+
+                
                 // put the flake in our main view
                 [self.view addSubview:centerView];
             }
