@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F4BBE7C6-5FB8-4FFB-889F-41763FE7C5E6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Farm Fresh Simcoe</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CD962EC3-CD3A-4483-9892-B195F98D6A24</key>
+		<string>https://github.com/EmersonGGS/Helpr.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Farm Fresh Simcoe.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CD962EC3-CD3A-4483-9892-B195F98D6A24</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/EmersonGGS/Helpr.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CD962EC3-CD3A-4483-9892-B195F98D6A24</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CD962EC3-CD3A-4483-9892-B195F98D6A24</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Helpr</string>
+		</dict>
+	</array>
+</dict>
+</plist>

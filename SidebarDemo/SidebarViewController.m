@@ -32,7 +32,7 @@
       self.view.backgroundColor = [UIColor colorWithRed:0.318 green:0.263 blue:0.224 alpha:1.0];
      self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    menuItems = @[@"profile", @"jobs", @"ongoing", @"logout"];
+    menuItems = @[@"profile", @"jobs", @"ongoing"];
     [UIImage imageNamed:@"helpr-logo.png"];
   
 }
@@ -92,11 +92,11 @@
     }
     
 }
-
-//logout function
--(void)logout:(UIButton*)sender {
- [PFUser logOut];
-}
+//
+////logout function
+//-(void)logout:(UIButton*)sender {
+// [PFUser logOut];
+//}
 
 
 @end

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FindJobsViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
 @end

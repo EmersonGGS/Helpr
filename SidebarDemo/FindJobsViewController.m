@@ -12,6 +12,8 @@
 
 @interface FindJobsViewController ()
 
+
+
 @end
 
 @implementation FindJobsViewController
@@ -35,7 +37,44 @@
                                                                       action:@selector(infoButtonSelected:)];
     self.navigationItem.leftBarButtonItem = _sidebarButton;
     
+    //get screen values
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenBound.size;
+    CGFloat screenWidth = screenSize.width;
+    CGFloat screenHeight = screenSize.height;
     
+    //ref to the current view
+    UIScrollView *mainScrollView = [[UIScrollView alloc] init];
+    self.view = mainScrollView;
+    [mainScrollView setScrollEnabled:YES];
+    int scrollHeight = 0;
+    
+    
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Jobs"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            
+            //create counter
+            int counterInt = 0;
+            for (PFObject *object in objects) {
+                counterInt+=1;
+                NSLog(@"Successfully retrieved %d objects.", objects.count);
+                scrollHeight+=(10+120*counterInt);
+                
+                UIView *centerView = [[UIView alloc] init];
+                CGRect frame = CGRectMake(0, (10+120*counterInt), 400, 100);
+                centerView.frame = frame;
+                centerView.backgroundColor = [UIColor redColor];
+                // put the flake in our main view
+                [self.view addSubview:centerView];
+            }
+            [mainScrollView setContentSize:CGSizeMake(screenWidth, scrollHeight)];
+        } else {
+            // The request failed
+        }
+        
+    }];
     
     
     
@@ -63,5 +102,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end
