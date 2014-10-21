@@ -124,6 +124,7 @@ int scrollHeight = 0;  // Or any other default value.
                 UIColor *bgColour =[[UIColor alloc]initWithRed:46.0/255.0 green:204.0/255.0 blue:113.0/255.0 alpha:1.0];
                 acceptBtn.backgroundColor=bgColour;
                 [acceptBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                [acceptBtn addTarget:self action:@selector(jobAccepted:) forControlEvents:UIControlEventTouchUpInside];
                 [centerView addSubview:acceptBtn];
 
                 
@@ -147,6 +148,10 @@ int scrollHeight = 0;  // Or any other default value.
     _sidebarButton.tintColor = [UIColor whiteColor];
 }
 
+-(IBAction)jobAccepted:(id)sender{
+    NSLog(@"Sender: %@", sender);
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -163,4 +168,7 @@ int scrollHeight = 0;  // Or any other default value.
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
 @end

@@ -10,4 +10,5 @@
 
 @interface FindJobsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
+- (IBAction)jobAccepted:(id)sender;
 @end
