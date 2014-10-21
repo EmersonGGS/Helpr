@@ -13,6 +13,7 @@
 		653CEA1119F092F800E9A3FD /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1019F092F800E9A3FD /* ProfileViewController.m */; };
 		653CEA1419F0931900E9A3FD /* FindJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1319F0931900E9A3FD /* FindJobsViewController.m */; };
 		653CEA1719F0933200E9A3FD /* OngoingTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1619F0933200E9A3FD /* OngoingTasksViewController.m */; };
+		65B10F8719F5E16D00DA8091 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B10F8619F5E16D00DA8091 /* menu.png */; };
 		973B257218FAF2CE00640F96 /* leftLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 973B257118FAF2CE00640F96 /* leftLogo.png */; };
 		973B257618FB023F00640F96 /* main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 973B257518FB023F00640F96 /* main.jpg */; };
 		973B257818FB192300640F96 /* savebtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 973B257718FB192300640F96 /* savebtn.png */; };
@@ -61,6 +62,7 @@
 		653CEA1319F0931900E9A3FD /* FindJobsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindJobsViewController.m; sourceTree = "<group>"; };
 		653CEA1519F0933200E9A3FD /* OngoingTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingTasksViewController.h; sourceTree = "<group>"; };
 		653CEA1619F0933200E9A3FD /* OngoingTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OngoingTasksViewController.m; sourceTree = "<group>"; };
+		65B10F8619F5E16D00DA8091 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = SOURCE_ROOT; };
 		973B257118FAF2CE00640F96 /* leftLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftLogo.png; sourceTree = "<group>"; };
 		973B257518FB023F00640F96 /* main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main.jpg; sourceTree = "<group>"; };
 		973B257718FB192300640F96 /* savebtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = savebtn.png; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		653CEA0A19F085DB00E9A3FD /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				65B10F8619F5E16D00DA8091 /* menu.png */,
 				653CEA0D19F089F400E9A3FD /* helpr-logo.png */,
 			);
 			name = assets;
@@ -306,6 +309,7 @@
 			files = (
 				F4EECF1C177C99F400778578 /* InfoPlist.strings in Resources */,
 				973B257818FB192300640F96 /* savebtn.png in Resources */,
+				65B10F8719F5E16D00DA8091 /* menu.png in Resources */,
 				973CD5D418F9A75B00CB0831 /* login.png in Resources */,
 				978ED69818F8B0EA0062D5F7 /* Logofarm-1.png in Resources */,
 				653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */,
