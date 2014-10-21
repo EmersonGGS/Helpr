@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-      self.view.backgroundColor = [UIColor colorWithRed:0.318 green:0.263 blue:0.224 alpha:1.0];
+      self.view.backgroundColor = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1];
      self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     menuItems = @[@"profile", @"jobs", @"ongoing"];
@@ -56,13 +56,25 @@
     // Return the number of rows in the section.
     return [menuItems count];
 }
+
+
+
 - (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
 {
     
-    if(indexPath.row % 2 == 0)
-        cell.backgroundColor = [UIColor colorWithRed:0.973 green:0.969 blue:0.894 alpha:1.0];
-    else
-        cell.backgroundColor = [UIColor colorWithRed:0.882 green:0.878 blue:0.773 alpha:1.0];
+         cell.backgroundColor = [UIColor clearColor];
+   // cell.layer.borderColor=[[UIColor colorWithRed:1 green:1 blue:1 alpha:1] CGColor];
+    //cell.layer.borderWidth=1.0;
+    
+    
+    
+    //test1
+    
+    
+    
+    
+    
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

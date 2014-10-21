@@ -31,7 +31,8 @@
     // Do any additional setup after loading the view.
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor colorWithRed:0.667 green:0.796 blue:0.655 alpha:1.0];
+    UIColor *bgColour = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
+    self.view.backgroundColor = bgColour;
     UIBarButtonItem* _sidebarButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
                                                                        style:UIBarButtonItemStylePlain
                                                                       target:self

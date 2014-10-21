@@ -23,7 +23,7 @@
     self.navigationItem.title = @"Home";
 
     
-    UIColor *bgColour = [[UIColor alloc]initWithRed:68.0/255.0 green:68.0/255.0 blue:68.0/255.0 alpha:1.0];
+   UIColor *bgColour = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
     self.view.backgroundColor = bgColour;
     UIBarButtonItem* _sidebarButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
                                                                        style:UIBarButtonItemStylePlain
