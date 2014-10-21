@@ -15,5 +15,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *email;
 - (IBAction)signup:(id)sender;
 - (IBAction)backbtn:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *signup;
 
 @end

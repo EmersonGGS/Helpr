@@ -32,7 +32,7 @@
     self.password.delegate = self;
     self.email.delegate = self;
     
-    UIColor *bgColour = [[UIColor alloc]initWithRed:68.0/255.0 green:68.0/255.0 blue:68.0/255.0 alpha:1.0];
+  UIColor *bgColour = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1] ;
     self.view.backgroundColor = bgColour;
     
 	// Do any additional setup after loading the view.
@@ -40,6 +40,7 @@
     
     self.username.borderStyle = UITextBorderStyleNone;
     self.username.backgroundColor = [UIColor whiteColor];
+    
     self.email.borderStyle = UITextBorderStyleNone;
     self.email.backgroundColor = [UIColor whiteColor];
     self.password.borderStyle = UITextBorderStyleNone;
@@ -59,12 +60,28 @@
     self.password.leftViewMode = UITextFieldViewModeAlways;
     
     //Adding border Colours
-    self.username.layer.borderColor=[[UIColor colorWithRed:84.0/255.0f green:84.0/255.0f blue:84.0/255.0f alpha:1.0] CGColor];
-    self.username.layer.borderWidth=3.0;
-    self.email.layer.borderColor=[[UIColor colorWithRed:84.0/255.0f green:84.0/255.0f blue:84.0/255.0f alpha:1.0] CGColor];
-    self.email.layer.borderWidth=3.0;
-    self.password.layer.borderColor=[[UIColor colorWithRed:84.0/255.0f green:84.0/255.0f blue:84.0/255.0f alpha:1.0] CGColor];
-    self.password.layer.borderWidth=3.0;
+    self.username.layer.borderColor=[[UIColor colorWithRed:1 green:1 blue:1 alpha:1] CGColor];
+    self.username.layer.borderWidth=1.0;
+    self.email.layer.borderColor=[[UIColor colorWithRed:1 green:1 blue:1 alpha:1] CGColor];
+    self.email.layer.borderWidth=1.0;
+    self.password.layer.borderColor=[[UIColor colorWithRed:1 green:1 blue:1 alpha:1] CGColor];
+    self.password.layer.borderWidth=1.0;
+    
+    
+    
+    
+    self.username.layer.cornerRadius = 5;
+    self.username.layer.masksToBounds = YES;
+    self.password.layer.cornerRadius = 5;
+    self.password.layer.masksToBounds = YES;
+    self.email.layer.cornerRadius = 5;
+    self.email.layer.masksToBounds = YES;
+    _signup.layer.cornerRadius = 5;
+    _signup.layer.masksToBounds = YES;
+     _signup.backgroundColor = [UIColor colorWithRed:0.18 green:0.8 blue:0.443 alpha:1];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -29,6 +29,8 @@
     //
     UIColor *bgColour = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1] ;
     self.view.backgroundColor = bgColour;
+    [_signup setTitleColor:[UIColor colorWithRed:0.18 green:0.8 blue:0.443 alpha:1]forState:UIControlStateNormal];
+    
     
 	// Do any additional setup after loading the view.
     self.navigationItem.hidesBackButton = YES;
