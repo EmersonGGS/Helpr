@@ -9,6 +9,7 @@
 #import "JobsTableViewController.h"
 #import "JobTableViewCell.h"
 #import "SWRevealViewController.h"
+#import "AcceptJobViewController.h"
 #import <Parse/Parse.h>
 
 @interface JobsTableViewController ()
@@ -17,6 +18,7 @@
 
 @implementation JobsTableViewController
 
+NSMutableArray *contentArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,10 +32,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    // Do any additional setup after loading the view.
     
     UIColor *bgColour = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
     self.view.backgroundColor = bgColour;
@@ -91,13 +89,11 @@
 }
 
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.titlesArray count];
 }
 
@@ -126,21 +122,21 @@
 
 // Tap on table Row
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
-    
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Confirmation"
-                                                   message: @"Would you like to accept this job?"
-                                                  delegate: self
-                                         cancelButtonTitle:@"Decline"
-                                         otherButtonTitles:@"Accept",nil];
-    [alert show];
+    [self performSegueWithIdentifier: @"acceptJob" sender: self];
+}
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"acceptJob"]) {
+        AcceptJobViewController *transferViewController = segue.destinationViewController;
+        transferViewController.contentArray = contentArray;
+    }
 }
 
 - (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
 {
     
     if(indexPath.row % 2 == 0){
-        cell.backgroundColor = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
+        cell.backgroundColor = [UIColor colorWithRed:0.976 green:0.976 blue:0.976 alpha:1]; /*#f9f9f9*/
     }
     else{
         cell.backgroundColor = [UIColor whiteColor];
