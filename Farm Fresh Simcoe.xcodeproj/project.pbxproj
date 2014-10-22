@@ -17,6 +17,9 @@
 		65B998DE19F723A500ED5913 /* JobsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B998DD19F723A500ED5913 /* JobsTableViewController.m */; };
 		65B998E019F725A900ED5913 /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B998DF19F725A900ED5913 /* JobTableViewCell.xib */; };
 		65B998E319F72A7F00ED5913 /* JobTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B998E219F72A7F00ED5913 /* JobTableViewCell.m */; };
+		65B998ED19F75C7000ED5913 /* calendarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B998EA19F75C7000ED5913 /* calendarIcon.png */; };
+		65B998EE19F75C7000ED5913 /* locationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B998EB19F75C7000ED5913 /* locationIcon.png */; };
+		65B998EF19F75C7000ED5913 /* timeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B998EC19F75C7000ED5913 /* timeIcon.png */; };
 		973B257218FAF2CE00640F96 /* leftLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 973B257118FAF2CE00640F96 /* leftLogo.png */; };
 		973B257618FB023F00640F96 /* main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 973B257518FB023F00640F96 /* main.jpg */; };
 		973B257818FB192300640F96 /* savebtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 973B257718FB192300640F96 /* savebtn.png */; };
@@ -71,6 +74,9 @@
 		65B998DF19F725A900ED5913 /* JobTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobTableViewCell.xib; sourceTree = "<group>"; };
 		65B998E119F72A7F00ED5913 /* JobTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobTableViewCell.h; sourceTree = "<group>"; };
 		65B998E219F72A7F00ED5913 /* JobTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobTableViewCell.m; sourceTree = "<group>"; };
+		65B998EA19F75C7000ED5913 /* calendarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendarIcon.png; sourceTree = "<group>"; };
+		65B998EB19F75C7000ED5913 /* locationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationIcon.png; sourceTree = "<group>"; };
+		65B998EC19F75C7000ED5913 /* timeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeIcon.png; sourceTree = "<group>"; };
 		973B257118FAF2CE00640F96 /* leftLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftLogo.png; sourceTree = "<group>"; };
 		973B257518FB023F00640F96 /* main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main.jpg; sourceTree = "<group>"; };
 		973B257718FB192300640F96 /* savebtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = savebtn.png; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 		653CEA0A19F085DB00E9A3FD /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				65B998EA19F75C7000ED5913 /* calendarIcon.png */,
+				65B998EB19F75C7000ED5913 /* locationIcon.png */,
+				65B998EC19F75C7000ED5913 /* timeIcon.png */,
 				65B10F8619F5E16D00DA8091 /* menu.png */,
 				653CEA0D19F089F400E9A3FD /* helpr-logo.png */,
 			);
@@ -323,14 +332,17 @@
 				F4EECF1C177C99F400778578 /* InfoPlist.strings in Resources */,
 				973B257818FB192300640F96 /* savebtn.png in Resources */,
 				65B10F8719F5E16D00DA8091 /* menu.png in Resources */,
+				65B998EE19F75C7000ED5913 /* locationIcon.png in Resources */,
 				973CD5D418F9A75B00CB0831 /* login.png in Resources */,
 				978ED69818F8B0EA0062D5F7 /* Logofarm-1.png in Resources */,
 				653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */,
+				65B998ED19F75C7000ED5913 /* calendarIcon.png in Resources */,
 				9746E51C18F9ACA8000755DE /* signUp.png in Resources */,
 				9746E51E18F9AE93000755DE /* backbtn.png in Resources */,
 				973B257218FAF2CE00640F96 /* leftLogo.png in Resources */,
 				F4EECF24177C99F400778578 /* Default.png in Resources */,
 				F4EECF26177C99F400778578 /* Default@2x.png in Resources */,
+				65B998EF19F75C7000ED5913 /* timeIcon.png in Resources */,
 				F4EECF28177C99F400778578 /* Default-568h@2x.png in Resources */,
 				978ED69618F8A80F0062D5F7 /* index.png in Resources */,
 				9746E51A18F9AA85000755DE /* bglog.png in Resources */,

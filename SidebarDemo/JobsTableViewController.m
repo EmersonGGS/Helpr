@@ -113,14 +113,29 @@
         cell = [nib objectAtIndex:0];
     }
     
+    NSString *hoursText = [NSString stringWithFormat: @"Hours: %@", [self.hoursArray objectAtIndex:indexPath.row]];
+    
     cell.titleLabel.text = [self.titlesArray objectAtIndex:indexPath.row];
     cell.dateTimeLabel.text = [self.dateArray objectAtIndex:indexPath.row];
     cell.timeLabel.text = [self.timeArray objectAtIndex:indexPath.row];
-    cell.hoursTimeLabel.text = [self.hoursArray objectAtIndex:indexPath.row], @" Hours";
+    cell.hoursTimeLabel.text = hoursText;
     cell.addressLabel.text = [self.addressArray objectAtIndex:indexPath.row];
     
     return cell;
 }
+
+// Tap on table Row
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Confirmation"
+                                                   message: @"Would you like to accept this job?"
+                                                  delegate: self
+                                         cancelButtonTitle:@"Decline"
+                                         otherButtonTitles:@"Accept",nil];
+    [alert show];
+
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
