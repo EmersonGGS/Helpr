@@ -136,6 +136,18 @@
 
 }
 
+- (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
+{
+    
+    if(indexPath.row % 2 == 0){
+        cell.backgroundColor = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
+    }
+    else{
+        cell.backgroundColor = [UIColor whiteColor];
+    }
+}
+
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
