@@ -187,33 +187,23 @@
             </objects>
             <point key="canvasLocation" x="-425" y="-373"/>
         </scene>
-        <!--Find Jobs View Controller-->
-        <scene sceneID="35X-ST-BRw">
+        <!--Jobs Table View Controller-->
+        <scene sceneID="0eH-u8-ejs">
             <objects>
-                <viewController id="tiA-fo-4jg" customClass="FindJobsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SeA-Hs-2UY"/>
-                        <viewControllerLayoutGuide type="bottom" id="5aX-8z-YAC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ba1-7n-1sZ">
+                <tableViewController id="Ag8-Ev-lNr" customClass="JobsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QDE-p4-NGA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tTp-ZA-EH6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="mainScrollView" destination="tTp-ZA-EH6" id="Frf-Fk-XS5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xpc-aD-cqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Ag8-Ev-lNr" id="Ufp-sF-hQf"/>
+                            <outlet property="delegate" destination="Ag8-Ev-lNr" id="8xu-Xw-f5I"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uh6-OD-Fba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1342" y="-1073"/>
+            <point key="canvasLocation" x="1336" y="-1085"/>
         </scene>
         <!--Ongoing Tasks View Controller-->
         <scene sceneID="BX1-EA-CyV">
@@ -331,7 +321,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="tiA-fo-4jg" kind="custom" customClass="SWRevealViewControllerSegue" id="LQq-CK-cqr"/>
+                                    <segue destination="Ag8-Ev-lNr" kind="custom" customClass="SWRevealViewControllerSegue" id="eO1-NO-QHs"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ongoing" id="i6i-qH-WDI">
@@ -416,6 +406,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pbR-UC-xfk"/>
+        <segue reference="Q5s-fo-o3D"/>
     </inferredMetricsTieBreakers>
 </document>
