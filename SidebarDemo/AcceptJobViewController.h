@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface AcceptJobViewController : UIViewController
-@property (strong, nonatomic) NSMutableArray *contentArray;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hoursLabel;
+@property (nonatomic,strong) NSMutableArray *contentArray;
+
 @end

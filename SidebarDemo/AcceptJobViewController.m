@@ -7,14 +7,19 @@
 //
 
 #import "AcceptJobViewController.h"
-#import "SWRevealViewController.h"
-#import <Parse/Parse.h>
 
 @interface AcceptJobViewController ()
 
 @end
 
 @implementation AcceptJobViewController
+
+@synthesize titleLabel;
+@synthesize addressLabel;
+@synthesize timeLabel;
+@synthesize dateLabel;
+@synthesize hoursLabel;
+@synthesize contentArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,21 +34,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    UIColor *bgColour = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
-    self.view.backgroundColor = bgColour;
-    UIBarButtonItem* _sidebarButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
-                                                                       style:UIBarButtonItemStylePlain
-                                                                      target:self
-                                                                      action:@selector(infoButtonSelected:)];
-    self.navigationItem.leftBarButtonItem = _sidebarButton;
-    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
-    _sidebarButton.target = self.revealViewController;
-    _sidebarButton.action = @selector(revealToggle:);
-    _sidebarButton.tintColor = [UIColor whiteColor];
-    
-    NSLog(@"Passed Object %@", self.contentArray);
-
 }
 
 - (void)didReceiveMemoryWarning

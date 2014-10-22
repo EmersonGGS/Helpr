@@ -123,6 +123,9 @@ NSMutableArray *contentArray;
 // Tap on table Row
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
     [self performSegueWithIdentifier: @"acceptJob" sender: self];
+    NSString *cellTitleText = [[[tableView cellForRowAtIndexPath:indexPath] self.titleLabel] text];
+    
+    [contentArray addObject:cell.titleLabel.text];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

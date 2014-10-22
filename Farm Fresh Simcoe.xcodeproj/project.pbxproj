@@ -11,8 +11,8 @@
 		6354EE1018FB9810001A3924 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6354EE0F18FB9810001A3924 /* CoreData.framework */; };
 		653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 653CEA0D19F089F400E9A3FD /* helpr-logo.png */; };
 		653CEA1119F092F800E9A3FD /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1019F092F800E9A3FD /* ProfileViewController.m */; };
-		653CEA1419F0931900E9A3FD /* FindJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1319F0931900E9A3FD /* FindJobsViewController.m */; };
 		653CEA1719F0933200E9A3FD /* OngoingTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1619F0933200E9A3FD /* OngoingTasksViewController.m */; };
+		6562E6F119F86B5D003D8023 /* AcceptJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6562E6F019F86B5D003D8023 /* AcceptJobViewController.m */; };
 		65B10F8719F5E16D00DA8091 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B10F8619F5E16D00DA8091 /* menu.png */; };
 		65B998DE19F723A500ED5913 /* JobsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B998DD19F723A500ED5913 /* JobsTableViewController.m */; };
 		65B998E019F725A900ED5913 /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B998DF19F725A900ED5913 /* JobTableViewCell.xib */; };
@@ -64,10 +64,10 @@
 		653CEA0D19F089F400E9A3FD /* helpr-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "helpr-logo.png"; sourceTree = "<group>"; };
 		653CEA0F19F092F800E9A3FD /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		653CEA1019F092F800E9A3FD /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		653CEA1219F0931900E9A3FD /* FindJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindJobsViewController.h; sourceTree = "<group>"; };
-		653CEA1319F0931900E9A3FD /* FindJobsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindJobsViewController.m; sourceTree = "<group>"; };
 		653CEA1519F0933200E9A3FD /* OngoingTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingTasksViewController.h; sourceTree = "<group>"; };
 		653CEA1619F0933200E9A3FD /* OngoingTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OngoingTasksViewController.m; sourceTree = "<group>"; };
+		6562E6EF19F86B5D003D8023 /* AcceptJobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptJobViewController.h; sourceTree = "<group>"; };
+		6562E6F019F86B5D003D8023 /* AcceptJobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptJobViewController.m; sourceTree = "<group>"; };
 		65B10F8619F5E16D00DA8091 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = SOURCE_ROOT; };
 		65B998DC19F723A500ED5913 /* JobsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsTableViewController.h; sourceTree = "<group>"; };
 		65B998DD19F723A500ED5913 /* JobsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsTableViewController.m; sourceTree = "<group>"; };
@@ -208,6 +208,8 @@
 				F4EECF20177C99F400778578 /* AppDelegate.h */,
 				F4EECF21177C99F400778578 /* AppDelegate.m */,
 				F4EECF29177C99F400778578 /* MainStoryboard.storyboard */,
+				6562E6EF19F86B5D003D8023 /* AcceptJobViewController.h */,
+				6562E6F019F86B5D003D8023 /* AcceptJobViewController.m */,
 				65B998DC19F723A500ED5913 /* JobsTableViewController.h */,
 				65B998DD19F723A500ED5913 /* JobsTableViewController.m */,
 				65B998DF19F725A900ED5913 /* JobTableViewCell.xib */,
@@ -217,8 +219,6 @@
 				F4EECF49177DF87700778578 /* SidebarViewController.m */,
 				653CEA0F19F092F800E9A3FD /* ProfileViewController.h */,
 				653CEA1019F092F800E9A3FD /* ProfileViewController.m */,
-				653CEA1219F0931900E9A3FD /* FindJobsViewController.h */,
-				653CEA1319F0931900E9A3FD /* FindJobsViewController.m */,
 				653CEA1519F0933200E9A3FD /* OngoingTasksViewController.h */,
 				653CEA1619F0933200E9A3FD /* OngoingTasksViewController.m */,
 				F4EECF2C177C99F400778578 /* MainViewController.h */,
@@ -369,9 +369,9 @@
 				F4EECF2E177C99F400778578 /* MainViewController.m in Sources */,
 				65B998DE19F723A500ED5913 /* JobsTableViewController.m in Sources */,
 				653CEA1119F092F800E9A3FD /* ProfileViewController.m in Sources */,
+				6562E6F119F86B5D003D8023 /* AcceptJobViewController.m in Sources */,
 				F4EECF4A177DF87700778578 /* SidebarViewController.m in Sources */,
 				653CEA1719F0933200E9A3FD /* OngoingTasksViewController.m in Sources */,
-				653CEA1419F0931900E9A3FD /* FindJobsViewController.m in Sources */,
 				65B998E319F72A7F00ED5913 /* JobTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
