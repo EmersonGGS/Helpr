@@ -10,11 +10,11 @@
 
 @implementation JobTableViewCell
 
-@synthesize titleLabel = _titleLabel;
-@synthesize dateTimeLabel = _dateTimeLabel;
-@synthesize timeLabel = timeLabel;
-@synthesize hoursTimeLabel = _hoursTimeLabel;
-@synthesize addressLabel = _addressLabel;
+@synthesize titleLabel ;
+@synthesize dateTimeLabel;
+@synthesize timeLabel;
+@synthesize hoursTimeLabel;
+@synthesize addressLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

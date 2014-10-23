@@ -19,7 +19,7 @@
 @synthesize timeLabel;
 @synthesize dateLabel;
 @synthesize hoursLabel;
-@synthesize contentArray;
+@synthesize passedArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +34,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.passedArray = [[NSMutableArray alloc] init];
+    NSLog(@"contentArray: %@", passedArray);
 }
 
 - (void)didReceiveMemoryWarning

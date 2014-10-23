@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JobsTableViewController : UITableViewController
+@interface JobsTableViewController : UITableViewController{
+    NSMutableArray *contentArray;
+}
 @property (strong, nonatomic) NSMutableArray *titlesArray;
 @property (strong, nonatomic) NSMutableArray *dateArray;
 @property (strong, nonatomic) NSMutableArray *timeArray;
 @property (strong, nonatomic) NSMutableArray *hoursArray;
 @property (strong, nonatomic) NSMutableArray *addressArray;
+@property(nonatomic,retain) NSMutableArray *contentArray;
 @end

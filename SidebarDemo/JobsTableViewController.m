@@ -18,7 +18,7 @@
 
 @implementation JobsTableViewController
 
-NSMutableArray *contentArray;
+@synthesize contentArray;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -50,6 +50,7 @@ NSMutableArray *contentArray;
     self.timeArray = [[NSMutableArray alloc] init];
     self.hoursArray = [[NSMutableArray alloc] init];
     self.addressArray = [[NSMutableArray alloc] init];
+    self.contentArray = [[NSMutableArray alloc] init];
     
     PFQuery *updateTableArray = [PFQuery queryWithClassName:@"Jobs"];
     [updateTableArray findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -122,16 +123,22 @@ NSMutableArray *contentArray;
 
 // Tap on table Row
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
-    [self performSegueWithIdentifier: @"acceptJob" sender: self];
-    NSString *cellTitleText = [[[tableView cellForRowAtIndexPath:indexPath] self.titleLabel] text];
+    
+    static NSString *jobCellIdentifier = @"JobViewCellid";
+    JobTableViewCell *cell = (JobTableViewCell *)[tableView dequeueReusableCellWithIdentifier:jobCellIdentifier];
     
     [contentArray addObject:cell.titleLabel.text];
+    [contentArray addObject:cell.dateTimeLabel.text];
+    [contentArray addObject:cell.timeLabel.text];
+    [contentArray addObject:cell.hoursTimeLabel.text];
+    [contentArray addObject:cell.addressLabel.text];
+    [self performSegueWithIdentifier: @"acceptJob" sender: self];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"acceptJob"]) {
         AcceptJobViewController *transferViewController = segue.destinationViewController;
-        transferViewController.contentArray = contentArray;
+        transferViewController.passedArray = contentArray;
     }
 }
 
