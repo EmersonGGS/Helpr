@@ -296,6 +296,14 @@
                                 <rect key="frame" x="13" y="183" width="36" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="231" translatesAutoresizingMaskIntoConstraints="NO" id="1RO-7e-f3H">
+                                <rect key="frame" x="45" y="237" width="231" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -305,6 +313,7 @@
                         <outlet property="dateLabel" destination="JbB-hu-jRV" id="Wpn-LE-uk1"/>
                         <outlet property="declineBtn" destination="awM-YQ-Mfm" id="RRg-12-Vna"/>
                         <outlet property="hoursLabel" destination="BvE-ES-eyH" id="yhl-s3-jQV"/>
+                        <outlet property="notesLabel" destination="1RO-7e-f3H" id="iFW-vB-p1C"/>
                         <outlet property="timeLabel" destination="lXj-xf-Pds" id="g2c-WN-PXV"/>
                         <outlet property="titleLabel" destination="Ql5-gG-v4e" id="mVZ-SD-4Hd"/>
                     </connections>

@@ -14,5 +14,6 @@
 @property (strong, nonatomic) NSMutableArray *timeArray;
 @property (strong, nonatomic) NSMutableArray *hoursArray;
 @property (strong, nonatomic) NSMutableArray *addressArray;
+@property (strong, nonatomic) NSMutableArray *notesArray;
 @property(nonatomic,strong)NSMutableArray *contentArray;
 @end

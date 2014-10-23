@@ -52,6 +52,7 @@
     self.timeArray = [[NSMutableArray alloc] init];
     self.hoursArray = [[NSMutableArray alloc] init];
     self.addressArray = [[NSMutableArray alloc] init];
+    self.notesArray = [[NSMutableArray alloc] init];
     contentArray = [[NSMutableArray alloc] init];
     
     PFQuery *updateTableArray = [PFQuery queryWithClassName:@"Jobs"];
@@ -67,6 +68,7 @@
                 NSString *timeString = object[@"startTime"];
                 NSString *hoursString = object[@"numofHours"];
                 NSString *addressString = object[@"address"];
+                NSString *notesString = object[@"notes"];
                 
                 //add initialized vars into appropriate arrays
                 [self.titlesArray addObject:titleString];
@@ -74,6 +76,7 @@
                 [self.timeArray addObject:timeString];
                 [self.hoursArray addObject:hoursString];
                 [self.addressArray addObject:addressString];
+                [self.notesArray addObject:notesString];
             }
             [self.tableView reloadData];
         } else {
@@ -129,11 +132,14 @@
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
     
     NSString *hoursText = [NSString stringWithFormat: @"Hours: %@", [self.hoursArray objectAtIndex:indexPath.row]];
+    NSString *notesText = [NSString stringWithFormat: @"Notes: %@", [self.notesArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.titlesArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.dateArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.timeArray objectAtIndex:indexPath.row]];
     [contentArray addObject:hoursText];
     [contentArray addObject:[self.addressArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:notesText];
+    
     NSLog(@"%@", contentArray);
     [self performSegueWithIdentifier: @"acceptJob" sender: self];
 }

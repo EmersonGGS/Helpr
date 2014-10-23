@@ -21,6 +21,7 @@
 @synthesize timeLabel;
 @synthesize dateLabel;
 @synthesize hoursLabel;
+@synthesize notesLabel;
 @synthesize passedArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -53,6 +54,7 @@
     timeLabel.text = [passedArray objectAtIndex:2];
     dateLabel.text = [passedArray objectAtIndex:1];
     hoursLabel.text = [passedArray objectAtIndex:3];
+    notesLabel.text = [passedArray objectAtIndex:5];
 
     NSLog(@"contentArray: %@", passedArray);
 }
@@ -88,9 +90,9 @@
     [thanks show];
     
     PFObject *ongoingObj = [PFObject objectWithClassName:@"Ongoing"];
-    ongoingObj[@"score"] = @1337;
-    ongoingObj[@"playerName"] = @"Sean Plott";
-    ongoingObj[@"cheatMode"] = @NO;
+    ongoingObj[@"address"] = @1337;
+    ongoingObj[@"date"] = @"Sean Plott";
+    ongoingObj[@"assignedUser"] = 0;
     [ongoingObj saveInBackground];
     
 }

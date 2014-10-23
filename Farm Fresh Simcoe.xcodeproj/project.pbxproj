@@ -12,14 +12,14 @@
 		653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 653CEA0D19F089F400E9A3FD /* helpr-logo.png */; };
 		653CEA1119F092F800E9A3FD /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1019F092F800E9A3FD /* ProfileViewController.m */; };
 		653CEA1719F0933200E9A3FD /* OngoingTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1619F0933200E9A3FD /* OngoingTasksViewController.m */; };
-		6562E6F119F86B5D003D8023 /* AcceptJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6562E6F019F86B5D003D8023 /* AcceptJobViewController.m */; };
 		65B10F8719F5E16D00DA8091 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B10F8619F5E16D00DA8091 /* menu.png */; };
-		65B998DE19F723A500ED5913 /* JobsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B998DD19F723A500ED5913 /* JobsTableViewController.m */; };
 		65B998E019F725A900ED5913 /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B998DF19F725A900ED5913 /* JobTableViewCell.xib */; };
 		65B998E319F72A7F00ED5913 /* JobTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B998E219F72A7F00ED5913 /* JobTableViewCell.m */; };
 		65B998ED19F75C7000ED5913 /* calendarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B998EA19F75C7000ED5913 /* calendarIcon.png */; };
 		65B998EE19F75C7000ED5913 /* locationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B998EB19F75C7000ED5913 /* locationIcon.png */; };
 		65B998EF19F75C7000ED5913 /* timeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B998EC19F75C7000ED5913 /* timeIcon.png */; };
+		65EAF7FE19F9B6B100A0594B /* AcceptJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EAF7FD19F9B6B100A0594B /* AcceptJobViewController.m */; };
+		65EAF80119F9B77700A0594B /* JobsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EAF80019F9B77700A0594B /* JobsTableViewController.m */; };
 		973B257218FAF2CE00640F96 /* leftLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 973B257118FAF2CE00640F96 /* leftLogo.png */; };
 		973B257618FB023F00640F96 /* main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 973B257518FB023F00640F96 /* main.jpg */; };
 		973B257818FB192300640F96 /* savebtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 973B257718FB192300640F96 /* savebtn.png */; };
@@ -66,17 +66,17 @@
 		653CEA1019F092F800E9A3FD /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		653CEA1519F0933200E9A3FD /* OngoingTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingTasksViewController.h; sourceTree = "<group>"; };
 		653CEA1619F0933200E9A3FD /* OngoingTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OngoingTasksViewController.m; sourceTree = "<group>"; };
-		6562E6EF19F86B5D003D8023 /* AcceptJobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptJobViewController.h; sourceTree = "<group>"; };
-		6562E6F019F86B5D003D8023 /* AcceptJobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptJobViewController.m; sourceTree = "<group>"; };
 		65B10F8619F5E16D00DA8091 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = SOURCE_ROOT; };
-		65B998DC19F723A500ED5913 /* JobsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsTableViewController.h; sourceTree = "<group>"; };
-		65B998DD19F723A500ED5913 /* JobsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsTableViewController.m; sourceTree = "<group>"; };
 		65B998DF19F725A900ED5913 /* JobTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobTableViewCell.xib; sourceTree = "<group>"; };
 		65B998E119F72A7F00ED5913 /* JobTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobTableViewCell.h; sourceTree = "<group>"; };
 		65B998E219F72A7F00ED5913 /* JobTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobTableViewCell.m; sourceTree = "<group>"; };
 		65B998EA19F75C7000ED5913 /* calendarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendarIcon.png; sourceTree = "<group>"; };
 		65B998EB19F75C7000ED5913 /* locationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationIcon.png; sourceTree = "<group>"; };
 		65B998EC19F75C7000ED5913 /* timeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeIcon.png; sourceTree = "<group>"; };
+		65EAF7FC19F9B6B100A0594B /* AcceptJobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptJobViewController.h; sourceTree = "<group>"; };
+		65EAF7FD19F9B6B100A0594B /* AcceptJobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptJobViewController.m; sourceTree = "<group>"; };
+		65EAF7FF19F9B77700A0594B /* JobsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsTableViewController.h; sourceTree = "<group>"; };
+		65EAF80019F9B77700A0594B /* JobsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsTableViewController.m; sourceTree = "<group>"; };
 		973B257118FAF2CE00640F96 /* leftLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftLogo.png; sourceTree = "<group>"; };
 		973B257518FB023F00640F96 /* main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main.jpg; sourceTree = "<group>"; };
 		973B257718FB192300640F96 /* savebtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = savebtn.png; sourceTree = "<group>"; };
@@ -207,14 +207,14 @@
 			children = (
 				F4EECF20177C99F400778578 /* AppDelegate.h */,
 				F4EECF21177C99F400778578 /* AppDelegate.m */,
+				65EAF7FC19F9B6B100A0594B /* AcceptJobViewController.h */,
+				65EAF7FD19F9B6B100A0594B /* AcceptJobViewController.m */,
 				F4EECF29177C99F400778578 /* MainStoryboard.storyboard */,
-				6562E6EF19F86B5D003D8023 /* AcceptJobViewController.h */,
-				6562E6F019F86B5D003D8023 /* AcceptJobViewController.m */,
-				65B998DC19F723A500ED5913 /* JobsTableViewController.h */,
-				65B998DD19F723A500ED5913 /* JobsTableViewController.m */,
 				65B998DF19F725A900ED5913 /* JobTableViewCell.xib */,
 				65B998E119F72A7F00ED5913 /* JobTableViewCell.h */,
 				65B998E219F72A7F00ED5913 /* JobTableViewCell.m */,
+				65EAF7FF19F9B77700A0594B /* JobsTableViewController.h */,
+				65EAF80019F9B77700A0594B /* JobsTableViewController.m */,
 				F4EECF48177DF87700778578 /* SidebarViewController.h */,
 				F4EECF49177DF87700778578 /* SidebarViewController.m */,
 				653CEA0F19F092F800E9A3FD /* ProfileViewController.h */,
@@ -363,13 +363,13 @@
 			files = (
 				978ED69B18F8C0120062D5F7 /* loginViewController.m in Sources */,
 				978ED69E18F8C02D0062D5F7 /* signUpViewController.m in Sources */,
+				65EAF7FE19F9B6B100A0594B /* AcceptJobViewController.m in Sources */,
 				F4D9AD1F1871725500E2D912 /* SWRevealViewController.m in Sources */,
 				F4EECF1E177C99F400778578 /* main.m in Sources */,
+				65EAF80119F9B77700A0594B /* JobsTableViewController.m in Sources */,
 				F4EECF22177C99F400778578 /* AppDelegate.m in Sources */,
 				F4EECF2E177C99F400778578 /* MainViewController.m in Sources */,
-				65B998DE19F723A500ED5913 /* JobsTableViewController.m in Sources */,
 				653CEA1119F092F800E9A3FD /* ProfileViewController.m in Sources */,
-				6562E6F119F86B5D003D8023 /* AcceptJobViewController.m in Sources */,
 				F4EECF4A177DF87700778578 /* SidebarViewController.m in Sources */,
 				653CEA1719F0933200E9A3FD /* OngoingTasksViewController.m in Sources */,
 				65B998E319F72A7F00ED5913 /* JobTableViewCell.m in Sources */,
