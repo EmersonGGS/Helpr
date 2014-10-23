@@ -39,9 +39,31 @@
                                                                       action:@selector(infoButtonSelected:)];
     self.navigationItem.leftBarButtonItem = _sidebarButton;
     
+   [_print setImage:[UIImage imageNamed:@"print.png"] forState:UIControlStateNormal];
+    _print.contentMode = UIViewContentModeScaleAspectFit;
+    
+    
+  /*  [myButton setImage:[UIImage imageNamed:@"btn_highlighted.png"] forState:UIControlStateHighlighted];
+    [myButton setImage:[UIImage imageNamed:@"btn_highlighted.png"] forState:UIControlStateSelected];
+    myButton.showsTouchWhenHighlighted = YES;
+    */
+    
+[[PFUser currentUser] objectForKey:@"username"];
+    
+    NSString* user = [[PFUser currentUser] objectForKey:@"username"];
+    
+  /*  self.avatar.layer.cornerRadius = self.avatar.frame.size.width / 2;
+    self.avatar.clipsToBounds = YES;
+    self.avatar.layer.borderWidth = 3.0f;
+    self.avatar.layer.borderColor = [UIColor whiteColor].CGColor;
+
+    //self.avatar.layer.cornerRadius = 10.0f;
+   */
+
     
     
     
+    self.username.text = user;
     
     
     

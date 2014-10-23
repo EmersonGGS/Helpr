@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *username;
+@property (weak, nonatomic) IBOutlet UILabel *hoursCompleted;
+@property (weak, nonatomic) IBOutlet UIButton *print;
+
 
 @end
