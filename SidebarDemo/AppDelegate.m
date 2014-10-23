@@ -32,6 +32,7 @@
                                                           [UIColor whiteColor], NSForegroundColorAttributeName,
                                                            shadow, NSShadowAttributeName,
                                                            [UIFont fontWithName:@"Kingthings_Exeter.ttf" size:21.0], NSFontAttributeName, nil]];
+    
     return YES;
 }
 

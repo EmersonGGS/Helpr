@@ -16,9 +16,9 @@
 
 @end
 
-@implementation JobsTableViewController
-
-@synthesize contentArray;
+@implementation JobsTableViewController {
+    NSMutableArray *contentArray;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    contentArray = [[NSMutableArray alloc] init];
     
     UIColor *bgColour = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
     self.view.backgroundColor = bgColour;
@@ -50,7 +52,7 @@
     self.timeArray = [[NSMutableArray alloc] init];
     self.hoursArray = [[NSMutableArray alloc] init];
     self.addressArray = [[NSMutableArray alloc] init];
-    self.contentArray = [[NSMutableArray alloc] init];
+    contentArray = [[NSMutableArray alloc] init];
     
     PFQuery *updateTableArray = [PFQuery queryWithClassName:@"Jobs"];
     [updateTableArray findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -118,26 +120,28 @@
     cell.hoursTimeLabel.text = hoursText;
     cell.addressLabel.text = [self.addressArray objectAtIndex:indexPath.row];
     
+    NSLog(@"address %@", cell.addressLabel.text);
+    
     return cell;
 }
 
 // Tap on table Row
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
     
-    static NSString *jobCellIdentifier = @"JobViewCellid";
-    JobTableViewCell *cell = (JobTableViewCell *)[tableView dequeueReusableCellWithIdentifier:jobCellIdentifier];
-    
-    [contentArray addObject:cell.titleLabel.text];
-    [contentArray addObject:cell.dateTimeLabel.text];
-    [contentArray addObject:cell.timeLabel.text];
-    [contentArray addObject:cell.hoursTimeLabel.text];
-    [contentArray addObject:cell.addressLabel.text];
+    NSString *hoursText = [NSString stringWithFormat: @"Hours: %@", [self.hoursArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.titlesArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.dateArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.timeArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:hoursText];
+    [contentArray addObject:[self.addressArray objectAtIndex:indexPath.row]];
+    NSLog(@"%@", contentArray);
     [self performSegueWithIdentifier: @"acceptJob" sender: self];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"acceptJob"]) {
+    if([segue.identifier isEqualToString:@"acceptJob"]) {
         AcceptJobViewController *transferViewController = segue.destinationViewController;
+        transferViewController.passedArray = [[NSMutableArray alloc]init];
         transferViewController.passedArray = contentArray;
     }
 }
