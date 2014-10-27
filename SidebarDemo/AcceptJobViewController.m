@@ -89,11 +89,16 @@
                                                 message:@"Wicked! Thanks for accepting this job. Don't forget to get your employers signature at the end" delegate:self cancelButtonTitle:@"Yeah, no Biggie." otherButtonTitles: nil];
     [thanks show];
     
-    PFObject *ongoingObj = [PFObject objectWithClassName:@"Ongoing"];
-    ongoingObj[@"address"] = @1337;
-    ongoingObj[@"date"] = @"Sean Plott";
-    ongoingObj[@"assignedUser"] = 0;
-    [ongoingObj saveInBackground];
+    //PFObject *ongoingObj = [PFObject objectWithClassName:@"Ongoing"];
+    //ongoingObj[@"address"] = @1337;
+    //ongoingObj[@"date"] = @"Sean Plott";
+    //ongoingObj[@"assignedUser"] = 0;
+    //[ongoingObj saveInBackground];
     
+    PFObject *ongoingObj = [PFObject objectWithClassName:@"Ongoing"];
+    ongoingObj[@"score"] = @1337;
+    ongoingObj[@"playerName"] = @"Sean Plott";
+    ongoingObj[@"cheatMode"] = @NO;
+    [ongoingObj saveInBackground];
 }
 @end

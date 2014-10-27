@@ -53,6 +53,7 @@
     self.hoursArray = [[NSMutableArray alloc] init];
     self.addressArray = [[NSMutableArray alloc] init];
     self.notesArray = [[NSMutableArray alloc] init];
+    self.objectIdArray = [[NSMutableArray alloc] init];
     contentArray = [[NSMutableArray alloc] init];
     
     PFQuery *updateTableArray = [PFQuery queryWithClassName:@"Jobs"];
@@ -69,6 +70,7 @@
                 NSString *hoursString = object[@"numofHours"];
                 NSString *addressString = object[@"address"];
                 NSString *notesString = object[@"notes"];
+                NSString *objectIdString = object[@"objectId"];
                 
                 //add initialized vars into appropriate arrays
                 [self.titlesArray addObject:titleString];
@@ -77,6 +79,7 @@
                 [self.hoursArray addObject:hoursString];
                 [self.addressArray addObject:addressString];
                 [self.notesArray addObject:notesString];
+                [self.objectIdArray addObject:objectIdString];
             }
             [self.tableView reloadData];
         } else {
@@ -139,6 +142,7 @@
     [contentArray addObject:hoursText];
     [contentArray addObject:[self.addressArray objectAtIndex:indexPath.row]];
     [contentArray addObject:notesText];
+    [contentArray addObject:[self.objectIdArray objectAtIndex:indexPath.row]];
     
     NSLog(@"%@", contentArray);
     [self performSegueWithIdentifier: @"acceptJob" sender: self];
