@@ -55,26 +55,12 @@
     dateLabel.text = [passedArray objectAtIndex:1];
     hoursLabel.text = [passedArray objectAtIndex:3];
     notesLabel.text = [passedArray objectAtIndex:5];
-
-    NSLog(@"contentArray: %@", passedArray);
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 //If user doesn't want the job
 - (IBAction)declineJob:(id)sender {
@@ -89,16 +75,33 @@
                                                 message:@"Wicked! Thanks for accepting this job. Don't forget to get your employers signature at the end" delegate:self cancelButtonTitle:@"Yeah, no Biggie." otherButtonTitles: nil];
     [thanks show];
     
-    //PFObject *ongoingObj = [PFObject objectWithClassName:@"Ongoing"];
-    //ongoingObj[@"address"] = @1337;
-    //ongoingObj[@"date"] = @"Sean Plott";
-    //ongoingObj[@"assignedUser"] = 0;
-    //[ongoingObj saveInBackground];
+    PFUser *currentUser = [PFUser currentUser];
     
     PFObject *ongoingObj = [PFObject objectWithClassName:@"Ongoing"];
-    ongoingObj[@"score"] = @1337;
-    ongoingObj[@"playerName"] = @"Sean Plott";
-    ongoingObj[@"cheatMode"] = @NO;
+    ongoingObj[@"address"] = [passedArray objectAtIndex:4];
+    ongoingObj[@"date"] = [passedArray objectAtIndex:1];
+    ongoingObj[@"startTime"] = [passedArray objectAtIndex:2];
+    ongoingObj[@"title"] = [passedArray objectAtIndex:0];
+    ongoingObj[@"numofHours"] = [passedArray objectAtIndex:3];
+    ongoingObj[@"phoneNumber"] = [passedArray objectAtIndex:6];
+    ongoingObj[@"workerEmail"] = currentUser.email;
+    ongoingObj[@"notes"] = [passedArray objectAtIndex:5];
     [ongoingObj saveInBackground];
-}
+    
+    //Query to remove job from Jobs class
+    PFQuery *query = [PFQuery queryWithClassName:@"Jobs"];
+    [query whereKey:@"objectId" equalTo:[passedArray objectAtIndex:7]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                [object deleteInBackground];
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];}
 @end

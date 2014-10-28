@@ -53,6 +53,7 @@
     self.hoursArray = [[NSMutableArray alloc] init];
     self.addressArray = [[NSMutableArray alloc] init];
     self.notesArray = [[NSMutableArray alloc] init];
+    self.phoneArray = [[NSMutableArray alloc] init];
     self.objectIdArray = [[NSMutableArray alloc] init];
     contentArray = [[NSMutableArray alloc] init];
     
@@ -70,7 +71,8 @@
                 NSString *hoursString = object[@"numofHours"];
                 NSString *addressString = object[@"address"];
                 NSString *notesString = object[@"notes"];
-                NSString *objectIdString = object[@"objectId"];
+                NSString *phoneString = object[@"phoneNumber"];
+                NSString *objectIdString = object.objectId;
                 
                 //add initialized vars into appropriate arrays
                 [self.titlesArray addObject:titleString];
@@ -79,6 +81,7 @@
                 [self.hoursArray addObject:hoursString];
                 [self.addressArray addObject:addressString];
                 [self.notesArray addObject:notesString];
+                [self.phoneArray addObject:phoneString];
                 [self.objectIdArray addObject:objectIdString];
             }
             [self.tableView reloadData];
@@ -142,6 +145,7 @@
     [contentArray addObject:hoursText];
     [contentArray addObject:[self.addressArray objectAtIndex:indexPath.row]];
     [contentArray addObject:notesText];
+    [contentArray addObject:[self.phoneArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.objectIdArray objectAtIndex:indexPath.row]];
     
     NSLog(@"%@", contentArray);
