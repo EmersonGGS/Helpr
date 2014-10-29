@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6354EE0E18FB9196001A3924 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6354EE0D18FB9196001A3924 /* Parse.framework */; };
 		6354EE1018FB9810001A3924 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6354EE0F18FB9810001A3924 /* CoreData.framework */; };
+		636B7E081A008F4000111FDD /* SignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B7E071A008F4000111FDD /* SignatureViewController.m */; };
 		63B894C319FF5E370089CFA0 /* OngoingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B894C219FF5E370089CFA0 /* OngoingTableViewController.m */; };
 		653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 653CEA0D19F089F400E9A3FD /* helpr-logo.png */; };
 		653CEA1119F092F800E9A3FD /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1019F092F800E9A3FD /* ProfileViewController.m */; };
@@ -61,6 +62,8 @@
 /* Begin PBXFileReference section */
 		6354EE0D18FB9196001A3924 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = SidebarDemo/Parse.framework; sourceTree = "<group>"; };
 		6354EE0F18FB9810001A3924 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		636B7E061A008F4000111FDD /* SignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignatureViewController.h; sourceTree = "<group>"; };
+		636B7E071A008F4000111FDD /* SignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignatureViewController.m; sourceTree = "<group>"; };
 		63B894C119FF5E370089CFA0 /* OngoingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OngoingTableViewController.h; path = ../OngoingTableViewController.h; sourceTree = "<group>"; };
 		63B894C219FF5E370089CFA0 /* OngoingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OngoingTableViewController.m; path = ../OngoingTableViewController.m; sourceTree = "<group>"; };
 		653CEA0D19F089F400E9A3FD /* helpr-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "helpr-logo.png"; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 				65EAF7FC19F9B6B100A0594B /* AcceptJobViewController.h */,
 				65EAF7FD19F9B6B100A0594B /* AcceptJobViewController.m */,
 				F4EECF29177C99F400778578 /* MainStoryboard.storyboard */,
+				636B7E061A008F4000111FDD /* SignatureViewController.h */,
+				636B7E071A008F4000111FDD /* SignatureViewController.m */,
 				65B998DF19F725A900ED5913 /* JobTableViewCell.xib */,
 				65B998E119F72A7F00ED5913 /* JobTableViewCell.h */,
 				65B998E219F72A7F00ED5913 /* JobTableViewCell.m */,
@@ -368,6 +373,7 @@
 				F4EECF1E177C99F400778578 /* main.m in Sources */,
 				65EAF80119F9B77700A0594B /* JobsTableViewController.m in Sources */,
 				F4EECF22177C99F400778578 /* AppDelegate.m in Sources */,
+				636B7E081A008F4000111FDD /* SignatureViewController.m in Sources */,
 				F4EECF2E177C99F400778578 /* MainViewController.m in Sources */,
 				653CEA1119F092F800E9A3FD /* ProfileViewController.m in Sources */,
 				F4EECF4A177DF87700778578 /* SidebarViewController.m in Sources */,
