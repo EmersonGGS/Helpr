@@ -9,6 +9,7 @@
 #import "OngoingTableViewController.h"
 #import <Parse/Parse.h>
 #import "SWRevealViewController.h"
+#import "OngoingOptionsViewController.h"
 #import "JobTableViewCell.h"
 
 @interface OngoingTableViewController ()
@@ -127,30 +128,12 @@
 }
 
 // Tap on table Row
-//- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
-    
-    //NSString *hoursText = [NSString stringWithFormat: @"Hours: %@", [self.hoursArray objectAtIndex:indexPath.row]];
-    //NSString *notesText = [NSString stringWithFormat: @"Notes: %@", [self.notesArray objectAtIndex:indexPath.row]];
-    //[contentArray addObject:[self.titlesArray objectAtIndex:indexPath.row]];
-    //[contentArray addObject:[self.dateArray objectAtIndex:indexPath.row]];
-    //[contentArray addObject:[self.timeArray objectAtIndex:indexPath.row]];
-    //[contentArray addObject:hoursText];
-    //[contentArray addObject:[self.addressArray objectAtIndex:indexPath.row]];
-    //[contentArray addObject:notesText];
-    //[contentArray addObject:[self.phoneArray objectAtIndex:indexPath.row]];
-    //[contentArray addObject:[self.objectIdArray objectAtIndex:indexPath.row]];
-    
-    //NSLog(@"%@", contentArray);
-    //[self performSegueWithIdentifier: @"acceptJob" sender: self];
-//}
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+    [self performSegueWithIdentifier: @"ongoingOptionsSegue" sender:self];
+}
 
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    //if([segue.identifier isEqualToString:@"acceptJob"]) {
-        //AcceptJobViewController *transferViewController = segue.destinationViewController;
-        //transferViewController.passedArray = [[NSMutableArray alloc]init];
-        //transferViewController.passedArray = contentArray;
-    //}
-//}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+}
 
 - (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
 {

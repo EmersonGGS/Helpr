@@ -378,12 +378,65 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="lI7-DF-Fvq" kind="custom" identifier="getSignatureSegue" customClass="SWRevealViewControllerSegue" id="J3l-sI-pMd"/>
+                        <segue destination="gS1-Xj-vEj" kind="push" identifier="ongoingOptionsSegue" customClass="SWRevealViewControllerSegue" id="T44-gf-pbY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sao-5d-seS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="-424"/>
+            <point key="canvasLocation" x="1342" y="-424"/>
+        </scene>
+        <!--Ongoing Options View Controller-->
+        <scene sceneID="bxm-En-Y4y">
+            <objects>
+                <viewController id="gS1-Xj-vEj" customClass="OngoingOptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6qk-Ir-K2T"/>
+                        <viewControllerLayoutGuide type="bottom" id="OUw-rO-VYd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ytx-7S-Bsq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1Y-nW-KdJ">
+                                <rect key="frame" x="127" y="187" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Signature">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signatureBtnFunction:" destination="gS1-Xj-vEj" eventType="touchUpInside" id="4DD-A2-Ewd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na8-EW-bTO">
+                                <rect key="frame" x="138" y="225" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Phone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="phoneBtnFunction:" destination="gS1-Xj-vEj" eventType="touchUpInside" id="xWw-nH-XxW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgx-Wg-eZ7">
+                                <rect key="frame" x="121" y="263" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel Job">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnFunction:" destination="gS1-Xj-vEj" eventType="touchUpInside" id="Uoz-KM-1EQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="phoneBtnFunction" destination="Na8-EW-bTO" id="DuK-Ya-QdW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoS-1G-U1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="-424"/>
         </scene>
         <!--Signature View Controller-->
         <scene sceneID="BW9-aV-IvO">
@@ -415,7 +468,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Goc-mE-Bgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1750" y="-424"/>
+            <point key="canvasLocation" x="2316" y="-424"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="qwx-Sy-LiG">
