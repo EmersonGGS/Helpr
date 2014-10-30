@@ -16,7 +16,10 @@
 
 @end
 
-@implementation OngoingTableViewController
+@implementation OngoingTableViewController{
+    NSMutableArray *contentArray;
+}
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,6 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.tableView reloadData];
     
     UIColor *bgColour = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
     self.view.backgroundColor = bgColour;
@@ -52,6 +57,8 @@
     self.addressArray = [[NSMutableArray alloc] init];
     self.notesArray = [[NSMutableArray alloc] init];
     self.phoneArray = [[NSMutableArray alloc] init];
+    self.objectIdArray = [[NSMutableArray alloc] init];
+    contentArray = [[NSMutableArray alloc] init];
     
     PFQuery *updateTableArray = [PFQuery queryWithClassName:@"Ongoing"];
     [updateTableArray whereKey:@"workerEmail" equalTo:currentUser.email];
@@ -69,6 +76,7 @@
                 NSString *addressString = object[@"address"];
                 NSString *notesString = object[@"notes"];
                 NSString *phoneString = object[@"phoneNumber"];
+                NSString *objectIdString = object.objectId;
                 
                 //add initialized vars into appropriate arrays
                 [self.titlesArray addObject:titleString];
@@ -78,6 +86,7 @@
                 [self.addressArray addObject:addressString];
                 [self.notesArray addObject:notesString];
                 [self.phoneArray addObject:phoneString];
+                [self.objectIdArray addObject:objectIdString];
             }
             [self.tableView reloadData];
         } else {
@@ -129,10 +138,25 @@
 
 // Tap on table Row
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+    
+    [contentArray addObject:[self.titlesArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.dateArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.timeArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.hoursArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.addressArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.notesArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.phoneArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.objectIdArray objectAtIndex:indexPath.row]];
+    
     [self performSegueWithIdentifier: @"ongoingOptionsSegue" sender:self];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"ongoingOptionsSegue"]) {
+        OngoingOptionsViewController *transferViewController = segue.destinationViewController;
+        transferViewController.passedArray = [[NSMutableArray alloc]init];
+        transferViewController.passedArray = contentArray;
+    }
 }
 
 - (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath

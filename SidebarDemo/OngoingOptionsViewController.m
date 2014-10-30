@@ -8,12 +8,15 @@
 
 #import "OngoingOptionsViewController.h"
 #import "SWRevealViewController.h"
+#import <Parse/Parse.h>
 
 @interface OngoingOptionsViewController ()
 
 @end
 
 @implementation OngoingOptionsViewController
+
+@synthesize passedArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +44,8 @@
     _sidebarButton.action = @selector(revealToggle:);
     _sidebarButton.tintColor = [UIColor whiteColor];
     
+    NSLog(@"PassedArray: %@", passedArray);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,25 +54,42 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)signatureBtnFunction:(id)sender {
+    [self performSegueWithIdentifier: @"signatureSegue" sender:self];
 }
 
 //phone the job
 - (IBAction)phoneBtnFunction:(id)sender {
-    //[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:2135554321"]];
+    NSString *jobPhoneNumber = [self.passedArray objectAtIndex:6];
+    NSString *numToCall = [@"tel:" stringByAppendingString:jobPhoneNumber];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:numToCall]];
+    
 }
 
+//User no longer wants the job
 - (IBAction)cancelBtnFunction:(id)sender {
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Ongoing"];
+    [query getObjectInBackgroundWithId:[self.passedArray objectAtIndex:7] block:^(PFObject *object, NSError *error) {
+        // Do something with the returned PFObject in the gameScore variable.
+        
+        [object deleteInBackground];
+        
+        NSLog(@"Deleted: %@", object);
+        [self performSegueWithIdentifier: @"cancelJobSegue" sender:self];
+        
+    }];
+    
+    //putting job back in bank so it can be accepted by a different user
+    PFObject *revertJob = [PFObject objectWithClassName:@"Jobs"];
+    revertJob[@"title"] = [self.passedArray objectAtIndex:0];
+    revertJob[@"date"] = [self.passedArray objectAtIndex:1];
+    revertJob[@"startTime"] = [self.passedArray objectAtIndex:2];
+    revertJob[@"numofHours"] = [self.passedArray objectAtIndex:3];
+    revertJob[@"address"] = [self.passedArray objectAtIndex:4];
+    revertJob[@"notes"] = [self.passedArray objectAtIndex:5];
+    revertJob[@"phoneNumber"] = [self.passedArray objectAtIndex:6];
+    
+    [revertJob saveInBackground];
 }
 @end

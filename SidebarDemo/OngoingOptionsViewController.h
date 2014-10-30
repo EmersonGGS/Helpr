@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface OngoingOptionsViewController : UIViewController
+
+@property (strong, nonatomic) NSMutableArray *passedArray;
+
 - (IBAction)signatureBtnFunction:(id)sender;
 - (IBAction)phoneBtnFunction:(id)sender;
 - (IBAction)cancelBtnFunction:(id)sender;

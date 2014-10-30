@@ -64,8 +64,8 @@
 
 //If user doesn't want the job
 - (IBAction)declineJob:(id)sender {
-    //[self performSegueWithIdentifier: @"declineJobId" sender: self];
-    [self.navigationController popToRootViewControllerAnimated:TRUE];
+    
+    [self performSegueWithIdentifier: @"backToBrowse" sender: self];
 }
 
 //If user wants the job
@@ -103,5 +103,8 @@
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
-    }];}
+    }];
+    
+    [self performSegueWithIdentifier: @"backToBrowse" sender: self];
+}
 @end

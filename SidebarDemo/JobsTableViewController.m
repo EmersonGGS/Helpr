@@ -121,12 +121,10 @@
         cell = [nib objectAtIndex:0];
     }
     
-    NSString *hoursText = [NSString stringWithFormat: @"Hours: %@", [self.hoursArray objectAtIndex:indexPath.row]];
-    
     cell.titleLabel.text = [self.titlesArray objectAtIndex:indexPath.row];
     cell.dateTimeLabel.text = [self.dateArray objectAtIndex:indexPath.row];
     cell.timeLabel.text = [self.timeArray objectAtIndex:indexPath.row];
-    cell.hoursTimeLabel.text = hoursText;
+    cell.hoursTimeLabel.text = [self.hoursArray objectAtIndex:indexPath.row];
     cell.addressLabel.text = [self.addressArray objectAtIndex:indexPath.row];
     
     NSLog(@"address %@", cell.addressLabel.text);
@@ -136,15 +134,13 @@
 
 // Tap on table Row
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
-    
-    NSString *hoursText = [NSString stringWithFormat: @"Hours: %@", [self.hoursArray objectAtIndex:indexPath.row]];
-    NSString *notesText = [NSString stringWithFormat: @"Notes: %@", [self.notesArray objectAtIndex:indexPath.row]];
+
     [contentArray addObject:[self.titlesArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.dateArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.timeArray objectAtIndex:indexPath.row]];
-    [contentArray addObject:hoursText];
+    [contentArray addObject:[self.hoursArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.addressArray objectAtIndex:indexPath.row]];
-    [contentArray addObject:notesText];
+    [contentArray addObject:[self.notesArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.phoneArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.objectIdArray objectAtIndex:indexPath.row]];
     

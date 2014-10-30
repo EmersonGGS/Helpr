@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WEs-t0-tjJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WEs-t0-tjJ">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -316,6 +316,7 @@
                         <outlet property="notesLabel" destination="1RO-7e-f3H" id="iFW-vB-p1C"/>
                         <outlet property="timeLabel" destination="lXj-xf-Pds" id="g2c-WN-PXV"/>
                         <outlet property="titleLabel" destination="Ql5-gG-v4e" id="mVZ-SD-4Hd"/>
+                        <segue destination="Ag8-Ev-lNr" kind="custom" identifier="backToBrowse" customClass="SWRevealViewControllerSegue" id="Jac-GX-whS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYW-35-7rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -405,6 +406,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signatureBtnFunction:" destination="gS1-Xj-vEj" eventType="touchUpInside" id="4DD-A2-Ewd"/>
+                                    <segue destination="lI7-DF-Fvq" kind="push" identifier="signatureSegue" id="q6U-fY-k8n"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na8-EW-bTO">
@@ -431,12 +433,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="phoneBtnFunction" destination="Na8-EW-bTO" id="DuK-Ya-QdW"/>
+                        <segue destination="2" kind="push" identifier="cancelJobSegue" id="ClB-BR-96l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoS-1G-U1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1713" y="-424"/>
+            <point key="canvasLocation" x="1750" y="-424"/>
         </scene>
         <!--Signature View Controller-->
         <scene sceneID="BW9-aV-IvO">
@@ -461,6 +463,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TVk-63-CSh"/>
                     <connections>
                         <outlet property="mainImage" destination="Gsy-3N-F1o" id="5kv-ic-mIJ"/>
                         <outlet property="tempDrawImage" destination="cM1-A7-aIK" id="cKX-dS-3lv"/>
@@ -468,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Goc-mE-Bgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2316" y="-424"/>
+            <point key="canvasLocation" x="2253" y="-930"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="qwx-Sy-LiG">
@@ -681,6 +684,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Q5s-fo-o3D"/>
-        <segue reference="1sj-Og-tkA"/>
+        <segue reference="ClB-BR-96l"/>
+        <segue reference="Jac-GX-whS"/>
     </inferredMetricsTieBreakers>
 </document>
