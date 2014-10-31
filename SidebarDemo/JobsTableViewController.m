@@ -32,8 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setNeedsDisplay];
     
+    [self viewWillAppear:NO];
     contentArray = [[NSMutableArray alloc] init];
     
     UIColor *bgColour = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
@@ -93,6 +93,9 @@
     }];
 
 
+}
+
+- (void)viewWillAppear:(BOOL)animated{
 }
 
 - (void)didReceiveMemoryWarning
