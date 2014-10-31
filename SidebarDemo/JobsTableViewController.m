@@ -32,6 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setNeedsDisplay];
     
     contentArray = [[NSMutableArray alloc] init];
     

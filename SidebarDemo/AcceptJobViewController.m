@@ -65,7 +65,7 @@
 //If user doesn't want the job
 - (IBAction)declineJob:(id)sender {
     
-    [self performSegueWithIdentifier: @"backToBrowse" sender: self];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 //If user wants the job
@@ -103,8 +103,12 @@
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
+        
     }];
-    
-    [self performSegueWithIdentifier: @"backToBrowse" sender: self];
 }
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

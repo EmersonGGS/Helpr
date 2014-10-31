@@ -212,7 +212,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="I8Y-48-JF7"/>
                     <connections>
-                        <segue destination="vCA-hX-IAM" kind="push" identifier="acceptJob" id="Rjc-zR-Nez"/>
+                        <segue destination="vCA-hX-IAM" kind="modal" identifier="acceptJob" id="Rjc-zR-Nez"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uh6-OD-Fba" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -256,7 +256,6 @@
                                 </state>
                                 <connections>
                                     <action selector="declineJob:" destination="vCA-hX-IAM" eventType="touchUpInside" id="SY2-ac-UdV"/>
-                                    <segue destination="Ag8-Ev-lNr" kind="push" identifier="declineJobId" id="1sj-Og-tkA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPA-ON-2NN">
@@ -316,7 +315,7 @@
                         <outlet property="notesLabel" destination="1RO-7e-f3H" id="iFW-vB-p1C"/>
                         <outlet property="timeLabel" destination="lXj-xf-Pds" id="g2c-WN-PXV"/>
                         <outlet property="titleLabel" destination="Ql5-gG-v4e" id="mVZ-SD-4Hd"/>
-                        <segue destination="Ag8-Ev-lNr" kind="custom" identifier="backToBrowse" customClass="SWRevealViewControllerSegue" id="Jac-GX-whS"/>
+                        <segue destination="Ag8-Ev-lNr" kind="push" identifier="backToBrowse" customClass="SWRevealViewControllerSegue" id="iyx-Is-btj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYW-35-7rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -378,6 +377,7 @@
                             <outlet property="delegate" destination="ei0-Og-92T" id="oXm-Qm-NFC"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="cxx-os-RDj"/>
                     <connections>
                         <segue destination="gS1-Xj-vEj" kind="push" identifier="ongoingOptionsSegue" customClass="SWRevealViewControllerSegue" id="T44-gf-pbY"/>
                     </connections>
@@ -432,6 +432,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hAG-QQ-K2K"/>
                     <connections>
                         <segue destination="2" kind="push" identifier="cancelJobSegue" id="ClB-BR-96l"/>
                     </connections>
@@ -683,8 +684,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="iyx-Is-btj"/>
         <segue reference="Q5s-fo-o3D"/>
         <segue reference="ClB-BR-96l"/>
-        <segue reference="Jac-GX-whS"/>
     </inferredMetricsTieBreakers>
 </document>
