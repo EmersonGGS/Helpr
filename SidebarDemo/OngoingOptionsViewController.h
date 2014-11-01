@@ -16,4 +16,8 @@
 - (IBAction)phoneBtnFunction:(id)sender;
 - (IBAction)cancelBtnFunction:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIButton *cancelBtn;
+@property (strong, nonatomic) IBOutlet UIButton *phoneBtn;
+@property (strong, nonatomic) IBOutlet UIButton *signatureBtn;
+
 @end

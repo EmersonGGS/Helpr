@@ -392,10 +392,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1Y-nW-KdJ">
-                                <rect key="frame" x="127" y="187" width="66" height="30"/>
+                                <rect key="frame" x="77" y="152" width="166" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Signature">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="signatureBtnFunction:" destination="gS1-Xj-vEj" eventType="touchUpInside" id="4DD-A2-Ewd"/>
@@ -403,30 +404,39 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na8-EW-bTO">
-                                <rect key="frame" x="138" y="225" width="44" height="30"/>
+                                <rect key="frame" x="77" y="204" width="166" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Phone">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="phoneBtnFunction:" destination="gS1-Xj-vEj" eventType="touchUpInside" id="xWw-nH-XxW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgx-Wg-eZ7">
-                                <rect key="frame" x="121" y="263" width="78" height="30"/>
+                                <rect key="frame" x="77" y="256" width="166" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel Job">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="cancelBtnFunction:" destination="gS1-Xj-vEj" eventType="touchUpInside" id="Uoz-KM-1EQ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cancelBtn.png" translatesAutoresizingMaskIntoConstraints="NO" id="biv-iu-UN6">
+                                <rect key="frame" x="77" y="266" width="36" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="hAG-QQ-K2K"/>
                     <connections>
+                        <outlet property="cancelBtn" destination="Vgx-Wg-eZ7" id="pSF-4z-TNG"/>
+                        <outlet property="phoneBtn" destination="Na8-EW-bTO" id="aHP-2E-wzu"/>
+                        <outlet property="signatureBtn" destination="W1Y-nW-KdJ" id="u5o-HT-x95"/>
                         <segue destination="2" kind="push" identifier="cancelJobSegue" id="ClB-BR-96l"/>
                     </connections>
                 </viewController>
@@ -666,6 +676,7 @@
     </scenes>
     <resources>
         <image name="calendarIcon.png" width="67" height="65"/>
+        <image name="cancelBtn.png" width="44" height="44"/>
         <image name="helpr-logo.png" width="500" height="500"/>
         <image name="locationIcon.png" width="68" height="60"/>
         <image name="timeIcon.png" width="60" height="62"/>

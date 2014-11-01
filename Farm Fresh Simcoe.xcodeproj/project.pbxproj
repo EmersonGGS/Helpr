@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630AB2181A0578AF00671068 /* acceptBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 630AB2161A0578AF00671068 /* acceptBtn.png */; };
+		630AB2191A0578AF00671068 /* cancelBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 630AB2171A0578AF00671068 /* cancelBtn.png */; };
 		6354EE0E18FB9196001A3924 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6354EE0D18FB9196001A3924 /* Parse.framework */; };
 		6354EE1018FB9810001A3924 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6354EE0F18FB9810001A3924 /* CoreData.framework */; };
 		636B7E081A008F4000111FDD /* SignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B7E071A008F4000111FDD /* SignatureViewController.m */; };
@@ -61,6 +63,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630AB2161A0578AF00671068 /* acceptBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = acceptBtn.png; sourceTree = "<group>"; };
+		630AB2171A0578AF00671068 /* cancelBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancelBtn.png; sourceTree = "<group>"; };
 		6354EE0D18FB9196001A3924 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = SidebarDemo/Parse.framework; sourceTree = "<group>"; };
 		6354EE0F18FB9810001A3924 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		636B7E061A008F4000111FDD /* SignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignatureViewController.h; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				65B998EA19F75C7000ED5913 /* calendarIcon.png */,
+				630AB2161A0578AF00671068 /* acceptBtn.png */,
+				630AB2171A0578AF00671068 /* cancelBtn.png */,
 				65B998EB19F75C7000ED5913 /* locationIcon.png */,
 				65B998EC19F75C7000ED5913 /* timeIcon.png */,
 				65B10F8619F5E16D00DA8091 /* menu.png */,
@@ -348,6 +354,8 @@
 				653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */,
 				65B998ED19F75C7000ED5913 /* calendarIcon.png in Resources */,
 				9746E51C18F9ACA8000755DE /* signUp.png in Resources */,
+				630AB2181A0578AF00671068 /* acceptBtn.png in Resources */,
+				630AB2191A0578AF00671068 /* cancelBtn.png in Resources */,
 				9746E51E18F9AE93000755DE /* backbtn.png in Resources */,
 				973B257218FAF2CE00640F96 /* leftLogo.png in Resources */,
 				F4EECF24177C99F400778578 /* Default.png in Resources */,

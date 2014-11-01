@@ -44,6 +44,19 @@
     _sidebarButton.action = @selector(revealToggle:);
     _sidebarButton.tintColor = [UIColor whiteColor];
     
+    self.cancelBtn.backgroundColor = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1];
+    self.phoneBtn.backgroundColor = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1];
+    self.signatureBtn.backgroundColor = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1];
+    
+    self.cancelBtn.layer.cornerRadius = 5;
+    self.cancelBtn.layer.masksToBounds = YES;
+    
+    self.phoneBtn.layer.cornerRadius = 5;
+    self.phoneBtn.layer.masksToBounds = YES;
+    
+    self.signatureBtn.layer.cornerRadius = 5;
+    self.signatureBtn.layer.masksToBounds = YES;
+    
     NSLog(@"PassedArray: %@", passedArray);
     
 }
