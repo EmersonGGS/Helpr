@@ -21,21 +21,45 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"Home";
-
+    self.title = @"";
     
    UIColor *bgColour = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
     self.view.backgroundColor = bgColour;
+    
+    
+    
+    
+    
+    
+    
+    
     UIBarButtonItem* _sidebarButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
                                                                        style:UIBarButtonItemStylePlain
                                                                       target:self
                                                                       action:@selector(infoButtonSelected:)];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     self.navigationItem.leftBarButtonItem = _sidebarButton;
+    
 
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
     _sidebarButton.tintColor = [UIColor whiteColor];
+    
+    
+    
     /*
     NSArray *farmFoodsArray = [[NSArray alloc] initWithObjects:@"Apples",@"Cider",@"Beef",nil];
     PFObject *newFarm = [PFObject objectWithClassName:@"Farm"];

@@ -16,12 +16,16 @@
 		63B894C319FF5E370089CFA0 /* OngoingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B894C219FF5E370089CFA0 /* OngoingTableViewController.m */; };
 		653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 653CEA0D19F089F400E9A3FD /* helpr-logo.png */; };
 		653CEA1119F092F800E9A3FD /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1019F092F800E9A3FD /* ProfileViewController.m */; };
+		659F2D1F1A0687190059DF0C /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 659F2D1E1A0687190059DF0C /* cancel.png */; };
+		659F2D291A0692710059DF0C /* callBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 659F2D281A0692710059DF0C /* callBtn.png */; };
+		659F2D311A069A270059DF0C /* pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 659F2D301A069A270059DF0C /* pen.png */; };
+		659F2D331A069BB60059DF0C /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 659F2D321A069BB60059DF0C /* menu.png */; };
+		659F2D3D1A06B0BB0059DF0C /* timeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 659F2D3A1A06B0BB0059DF0C /* timeIcon.png */; };
+		659F2D3E1A06B0BB0059DF0C /* calendarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 659F2D3B1A06B0BB0059DF0C /* calendarIcon.png */; };
+		659F2D3F1A06B0BB0059DF0C /* locationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 659F2D3C1A06B0BB0059DF0C /* locationIcon.png */; };
 		65B10F8719F5E16D00DA8091 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B10F8619F5E16D00DA8091 /* menu.png */; };
 		65B998E019F725A900ED5913 /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B998DF19F725A900ED5913 /* JobTableViewCell.xib */; };
 		65B998E319F72A7F00ED5913 /* JobTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B998E219F72A7F00ED5913 /* JobTableViewCell.m */; };
-		65B998ED19F75C7000ED5913 /* calendarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B998EA19F75C7000ED5913 /* calendarIcon.png */; };
-		65B998EE19F75C7000ED5913 /* locationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B998EB19F75C7000ED5913 /* locationIcon.png */; };
-		65B998EF19F75C7000ED5913 /* timeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B998EC19F75C7000ED5913 /* timeIcon.png */; };
 		65EAF7FE19F9B6B100A0594B /* AcceptJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EAF7FD19F9B6B100A0594B /* AcceptJobViewController.m */; };
 		65EAF80119F9B77700A0594B /* JobsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EAF80019F9B77700A0594B /* JobsTableViewController.m */; };
 		973B257218FAF2CE00640F96 /* leftLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 973B257118FAF2CE00640F96 /* leftLogo.png */; };
@@ -76,13 +80,17 @@
 		653CEA0D19F089F400E9A3FD /* helpr-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "helpr-logo.png"; sourceTree = "<group>"; };
 		653CEA0F19F092F800E9A3FD /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		653CEA1019F092F800E9A3FD /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		659F2D1E1A0687190059DF0C /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		659F2D281A0692710059DF0C /* callBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callBtn.png; sourceTree = "<group>"; };
+		659F2D301A069A270059DF0C /* pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen.png; sourceTree = "<group>"; };
+		659F2D321A069BB60059DF0C /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		659F2D3A1A06B0BB0059DF0C /* timeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeIcon.png; sourceTree = "<group>"; };
+		659F2D3B1A06B0BB0059DF0C /* calendarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendarIcon.png; sourceTree = "<group>"; };
+		659F2D3C1A06B0BB0059DF0C /* locationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationIcon.png; sourceTree = "<group>"; };
 		65B10F8619F5E16D00DA8091 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = SOURCE_ROOT; };
 		65B998DF19F725A900ED5913 /* JobTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobTableViewCell.xib; sourceTree = "<group>"; };
 		65B998E119F72A7F00ED5913 /* JobTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobTableViewCell.h; sourceTree = "<group>"; };
 		65B998E219F72A7F00ED5913 /* JobTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobTableViewCell.m; sourceTree = "<group>"; };
-		65B998EA19F75C7000ED5913 /* calendarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendarIcon.png; sourceTree = "<group>"; };
-		65B998EB19F75C7000ED5913 /* locationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationIcon.png; sourceTree = "<group>"; };
-		65B998EC19F75C7000ED5913 /* timeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeIcon.png; sourceTree = "<group>"; };
 		65EAF7FC19F9B6B100A0594B /* AcceptJobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptJobViewController.h; sourceTree = "<group>"; };
 		65EAF7FD19F9B6B100A0594B /* AcceptJobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptJobViewController.m; sourceTree = "<group>"; };
 		65EAF7FF19F9B77700A0594B /* JobsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsTableViewController.h; sourceTree = "<group>"; };
@@ -164,11 +172,15 @@
 		653CEA0A19F085DB00E9A3FD /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				65B998EA19F75C7000ED5913 /* calendarIcon.png */,
+				659F2D3A1A06B0BB0059DF0C /* timeIcon.png */,
+				659F2D3B1A06B0BB0059DF0C /* calendarIcon.png */,
+				659F2D3C1A06B0BB0059DF0C /* locationIcon.png */,
+				659F2D321A069BB60059DF0C /* menu.png */,
+				659F2D301A069A270059DF0C /* pen.png */,
+				659F2D281A0692710059DF0C /* callBtn.png */,
+				659F2D1E1A0687190059DF0C /* cancel.png */,
 				630AB2161A0578AF00671068 /* acceptBtn.png */,
 				630AB2171A0578AF00671068 /* cancelBtn.png */,
-				65B998EB19F75C7000ED5913 /* locationIcon.png */,
-				65B998EC19F75C7000ED5913 /* timeIcon.png */,
 				65B10F8619F5E16D00DA8091 /* menu.png */,
 				653CEA0D19F089F400E9A3FD /* helpr-logo.png */,
 			);
@@ -346,21 +358,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4EECF1C177C99F400778578 /* InfoPlist.strings in Resources */,
+				659F2D3D1A06B0BB0059DF0C /* timeIcon.png in Resources */,
 				973B257818FB192300640F96 /* savebtn.png in Resources */,
 				65B10F8719F5E16D00DA8091 /* menu.png in Resources */,
-				65B998EE19F75C7000ED5913 /* locationIcon.png in Resources */,
+				659F2D331A069BB60059DF0C /* menu.png in Resources */,
 				973CD5D418F9A75B00CB0831 /* login.png in Resources */,
 				978ED69818F8B0EA0062D5F7 /* Logofarm-1.png in Resources */,
 				653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */,
-				65B998ED19F75C7000ED5913 /* calendarIcon.png in Resources */,
 				9746E51C18F9ACA8000755DE /* signUp.png in Resources */,
+				659F2D311A069A270059DF0C /* pen.png in Resources */,
 				630AB2181A0578AF00671068 /* acceptBtn.png in Resources */,
 				630AB2191A0578AF00671068 /* cancelBtn.png in Resources */,
 				9746E51E18F9AE93000755DE /* backbtn.png in Resources */,
 				973B257218FAF2CE00640F96 /* leftLogo.png in Resources */,
 				F4EECF24177C99F400778578 /* Default.png in Resources */,
 				F4EECF26177C99F400778578 /* Default@2x.png in Resources */,
-				65B998EF19F75C7000ED5913 /* timeIcon.png in Resources */,
+				659F2D291A0692710059DF0C /* callBtn.png in Resources */,
+				659F2D3F1A06B0BB0059DF0C /* locationIcon.png in Resources */,
 				F4EECF28177C99F400778578 /* Default-568h@2x.png in Resources */,
 				978ED69618F8A80F0062D5F7 /* index.png in Resources */,
 				9746E51A18F9AA85000755DE /* bglog.png in Resources */,
@@ -368,7 +382,9 @@
 				97C10EEE18F75ABB00D72764 /* season.png in Resources */,
 				F4EECF2B177C99F400778578 /* MainStoryboard.storyboard in Resources */,
 				65B998E019F725A900ED5913 /* JobTableViewCell.xib in Resources */,
+				659F2D1F1A0687190059DF0C /* cancel.png in Resources */,
 				97C10EEF18F75ABB00D72764 /* notseason.png in Resources */,
+				659F2D3E1A06B0BB0059DF0C /* calendarIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

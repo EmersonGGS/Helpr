@@ -50,6 +50,11 @@
     
     PFUser *currentUser = [PFUser currentUser];
     
+
+    
+
+    
+    
     self.titlesArray = [[NSMutableArray alloc] init];
     self.dateArray = [[NSMutableArray alloc] init];
     self.timeArray = [[NSMutableArray alloc] init];

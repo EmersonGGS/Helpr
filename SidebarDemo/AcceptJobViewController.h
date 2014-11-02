@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *notesLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *declineBtn;
+@property (weak, nonatomic) IBOutlet UIButton *accept;
+@property (weak, nonatomic) IBOutlet UIButton *decline;
 
 - (IBAction)acceptJob:(id)sender;
 - (IBAction)declineJob:(id)sender;

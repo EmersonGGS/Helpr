@@ -37,17 +37,10 @@
 {
     [super viewDidLoad];
     
-    UIColor *bgColour = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
+    UIColor *bgColour = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1];
     self.view.backgroundColor = bgColour;
-    UIBarButtonItem* _sidebarButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
-                                                                       style:UIBarButtonItemStylePlain
-                                                                      target:self
-                                                                      action:@selector(infoButtonSelected:)];
-    self.navigationItem.leftBarButtonItem = _sidebarButton;
-    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
-    _sidebarButton.target = self.revealViewController;
-    _sidebarButton.action = @selector(revealToggle:);
-    _sidebarButton.tintColor = [UIColor whiteColor];
+    
+
     
     titleLabel.text = [passedArray objectAtIndex:0];
     addressLabel.text = [passedArray objectAtIndex:4];
@@ -55,12 +48,33 @@
     dateLabel.text = [passedArray objectAtIndex:1];
     hoursLabel.text = [passedArray objectAtIndex:3];
     notesLabel.text = [passedArray objectAtIndex:5];
+    
+    
+    
+    
+    _accept.backgroundColor = [UIColor colorWithRed:0.357 green:0.761 blue:0.655 alpha:1];
+    
+    _accept.layer.cornerRadius = 5;
+    _accept.layer.masksToBounds = YES;
+
+    _decline.backgroundColor = [UIColor colorWithRed:0.933 green:0.333 blue:0.396 alpha:1];
+    
+    _decline.layer.cornerRadius = 5;
+    _decline.layer.masksToBounds = YES;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
+
+
+
+
+
+
 
 //If user doesn't want the job
 - (IBAction)declineJob:(id)sender {

@@ -20,7 +20,7 @@
      // Override point for customization after application launch.
 
     // Change the background color of navigation bar
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.114 green:0.114 blue:0.114 alpha:1.0]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
     
     
     
