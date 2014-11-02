@@ -42,9 +42,19 @@
     opacity = 1.0;
     
     
+   // _backgroundText.transform = CGAffineTransformMakeRotation( M_PI / 2 );
+
+    _save.transform = CGAffineTransformMakeRotation( M_PI / 2 );
+    _reset.transform = CGAffineTransformMakeRotation( M_PI / 2 );
     
       _save.backgroundColor = [UIColor colorWithRed:0.18 green:0.8 blue:0.443 alpha:1];
     _reset.backgroundColor = [UIColor colorWithRed:0.18 green:0.8 blue:0.443 alpha:1];
+    
+
+    
+    
+    
+    
     
     }
 
