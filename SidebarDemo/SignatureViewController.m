@@ -41,6 +41,11 @@
     brush = 3.0;
     opacity = 1.0;
     
+    
+    
+      _save.backgroundColor = [UIColor colorWithRed:0.18 green:0.8 blue:0.443 alpha:1];
+    _reset.backgroundColor = [UIColor colorWithRed:0.18 green:0.8 blue:0.443 alpha:1];
+    
     }
 
 - (void)viewDidUnload
