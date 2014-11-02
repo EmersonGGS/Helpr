@@ -26,6 +26,7 @@
 		65B10F8719F5E16D00DA8091 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B10F8619F5E16D00DA8091 /* menu.png */; };
 		65B998E019F725A900ED5913 /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B998DF19F725A900ED5913 /* JobTableViewCell.xib */; };
 		65B998E319F72A7F00ED5913 /* JobTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B998E219F72A7F00ED5913 /* JobTableViewCell.m */; };
+		65D7DE311A06D0D400237AB8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D7DE301A06D0D400237AB8 /* MessageUI.framework */; };
 		65EAF7FE19F9B6B100A0594B /* AcceptJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EAF7FD19F9B6B100A0594B /* AcceptJobViewController.m */; };
 		65EAF80119F9B77700A0594B /* JobsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EAF80019F9B77700A0594B /* JobsTableViewController.m */; };
 		973B257218FAF2CE00640F96 /* leftLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 973B257118FAF2CE00640F96 /* leftLogo.png */; };
@@ -91,6 +92,7 @@
 		65B998DF19F725A900ED5913 /* JobTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobTableViewCell.xib; sourceTree = "<group>"; };
 		65B998E119F72A7F00ED5913 /* JobTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobTableViewCell.h; sourceTree = "<group>"; };
 		65B998E219F72A7F00ED5913 /* JobTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobTableViewCell.m; sourceTree = "<group>"; };
+		65D7DE301A06D0D400237AB8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		65EAF7FC19F9B6B100A0594B /* AcceptJobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptJobViewController.h; sourceTree = "<group>"; };
 		65EAF7FD19F9B6B100A0594B /* AcceptJobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptJobViewController.m; sourceTree = "<group>"; };
 		65EAF7FF19F9B77700A0594B /* JobsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsTableViewController.h; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D7DE311A06D0D400237AB8 /* MessageUI.framework in Frameworks */,
 				6354EE1018FB9810001A3924 /* CoreData.framework in Frameworks */,
 				9761211318F9968E00609BEB /* SystemConfiguration.framework in Frameworks */,
 				9761211118F9968500609BEB /* StoreKit.framework in Frameworks */,
@@ -207,6 +210,7 @@
 		F4EECF10177C99F400778578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				65D7DE301A06D0D400237AB8 /* MessageUI.framework */,
 				6354EE0D18FB9196001A3924 /* Parse.framework */,
 				6354EE0F18FB9810001A3924 /* CoreData.framework */,
 				9761211218F9968E00609BEB /* SystemConfiguration.framework */,

@@ -603,21 +603,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aet-xA-buV" customClass="print">
-                                <rect key="frame" x="133" y="158" width="46" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aet-xA-buV">
+                                <rect key="frame" x="126" y="159" width="68" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="Print">
+                                <state key="normal" title="Save PDF">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveHoursPDF:" destination="5rY-od-6Ug" eventType="touchUpInside" id="PPA-Ov-Ynv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="hoursCompleted" destination="SY3-Pl-RcB" id="Yp7-of-eGT"/>
-                        <outlet property="print" destination="Aet-xA-buV" id="3VY-T4-GEZ"/>
                         <outlet property="username" destination="JK4-ze-qZr" id="Zl8-v4-NHy"/>
                     </connections>
                 </viewController>

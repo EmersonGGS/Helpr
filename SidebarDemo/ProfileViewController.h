@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface ProfileViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ProfileViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *username;
-
 @property (weak, nonatomic) IBOutlet UILabel *hoursCompleted;
 
-@property (weak, nonatomic) IBOutlet UIButton *print;
+- (IBAction)saveHoursPDF:(id)sender;
 
 @end
