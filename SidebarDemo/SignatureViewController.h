@@ -21,15 +21,11 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *mainImage;
+- (IBAction)reset:(id)sender;
+- (IBAction)save:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *tempDrawImage;
+
 @property (weak, nonatomic) IBOutlet UIButton *reset;
 @property (weak, nonatomic) IBOutlet UIButton *save;
-
-
-
-- (IBAction)reset:(id)sender;
-
-- (IBAction)save:(id)sender;
-
 
 @end

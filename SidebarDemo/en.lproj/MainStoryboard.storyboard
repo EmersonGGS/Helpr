@@ -234,7 +234,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ql5-gG-v4e">
                                 <rect key="frame" x="13" y="49" width="280" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -507,13 +507,19 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="save:" destination="lI7-DF-Fvq" eventType="touchUpInside" id="gkr-LG-Sx7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3St-R9-WdS">
-                                <rect key="frame" x="39" y="439" width="37" height="30"/>
+                                <rect key="frame" x="20" y="439" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="reset:" destination="lI7-DF-Fvq" eventType="touchUpInside" id="ukA-P7-TSo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -521,6 +527,8 @@
                     <navigationItem key="navigationItem" id="TVk-63-CSh"/>
                     <connections>
                         <outlet property="mainImage" destination="Gsy-3N-F1o" id="5kv-ic-mIJ"/>
+                        <outlet property="reset" destination="3St-R9-WdS" id="WWV-TS-h9V"/>
+                        <outlet property="save" destination="ByR-og-seK" id="mh5-Df-17S"/>
                         <outlet property="tempDrawImage" destination="cM1-A7-aIK" id="cKX-dS-3lv"/>
                     </connections>
                 </viewController>
