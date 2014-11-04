@@ -35,8 +35,9 @@
 {
     [super viewDidLoad];
     
-    UIColor *bgColour = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1] ;
+    UIColor *bgColour = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
     self.view.backgroundColor = bgColour;
+    
     UIBarButtonItem* _sidebarButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
                                                                        style:UIBarButtonItemStylePlain
                                                                       target:self
@@ -53,7 +54,11 @@
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
     _sidebarButton.tintColor = [UIColor whiteColor];
+   
+    _volunteerForm.backgroundColor = [UIColor colorWithRed:0.357 green:0.761 blue:0.655 alpha:1];
     
+    _volunteerForm.layer.cornerRadius = 5;
+    _volunteerForm.layer.masksToBounds = YES;
     
 }
 

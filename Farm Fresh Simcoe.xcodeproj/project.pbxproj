@@ -29,6 +29,7 @@
 		65D7DE311A06D0D400237AB8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D7DE301A06D0D400237AB8 /* MessageUI.framework */; };
 		65EAF7FE19F9B6B100A0594B /* AcceptJobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EAF7FD19F9B6B100A0594B /* AcceptJobViewController.m */; };
 		65EAF80119F9B77700A0594B /* JobsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EAF80019F9B77700A0594B /* JobsTableViewController.m */; };
+		65F046DA1A087D130053D4E1 /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F046D91A087D130053D4E1 /* send.png */; };
 		973B257218FAF2CE00640F96 /* leftLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 973B257118FAF2CE00640F96 /* leftLogo.png */; };
 		973B257618FB023F00640F96 /* main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 973B257518FB023F00640F96 /* main.jpg */; };
 		973B257818FB192300640F96 /* savebtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 973B257718FB192300640F96 /* savebtn.png */; };
@@ -97,6 +98,7 @@
 		65EAF7FD19F9B6B100A0594B /* AcceptJobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptJobViewController.m; sourceTree = "<group>"; };
 		65EAF7FF19F9B77700A0594B /* JobsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsTableViewController.h; sourceTree = "<group>"; };
 		65EAF80019F9B77700A0594B /* JobsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsTableViewController.m; sourceTree = "<group>"; };
+		65F046D91A087D130053D4E1 /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send.png; sourceTree = "<group>"; };
 		973B257118FAF2CE00640F96 /* leftLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftLogo.png; sourceTree = "<group>"; };
 		973B257518FB023F00640F96 /* main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main.jpg; sourceTree = "<group>"; };
 		973B257718FB192300640F96 /* savebtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = savebtn.png; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		653CEA0A19F085DB00E9A3FD /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				65F046D91A087D130053D4E1 /* send.png */,
 				659F2D3A1A06B0BB0059DF0C /* timeIcon.png */,
 				659F2D3B1A06B0BB0059DF0C /* calendarIcon.png */,
 				659F2D3C1A06B0BB0059DF0C /* locationIcon.png */,
@@ -375,6 +378,7 @@
 				630AB2191A0578AF00671068 /* cancelBtn.png in Resources */,
 				9746E51E18F9AE93000755DE /* backbtn.png in Resources */,
 				973B257218FAF2CE00640F96 /* leftLogo.png in Resources */,
+				65F046DA1A087D130053D4E1 /* send.png in Resources */,
 				F4EECF24177C99F400778578 /* Default.png in Resources */,
 				F4EECF26177C99F400778578 /* Default@2x.png in Resources */,
 				659F2D291A0692710059DF0C /* callBtn.png in Resources */,

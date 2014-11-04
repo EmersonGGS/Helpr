@@ -9,6 +9,7 @@
 #import "SignatureViewController.h"
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
+#import "OngoingTableViewController.h"
 
 @interface SignatureViewController ()
 
@@ -95,21 +96,7 @@
 
 
 - (IBAction)save:(id)sender {
-    
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
-                                                             delegate:self
-                                                    cancelButtonTitle:nil
-                                               destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Save Signature", @"Cancel", nil];
-    [actionSheet showInView:self.view];
-    
-    
-    
-}
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if(buttonIndex == 0) {
         
         UIGraphicsBeginImageContextWithOptions(self.mainImage.bounds.size, NO, 0.0);
         [self.mainImage.image drawInRect:CGRectMake(0, 0, self.mainImage.frame.size.width, self.mainImage.frame.size.height)];
@@ -144,6 +131,10 @@
          completedObj[@"signature"] = imageFile;
          [completedObj saveInBackground];
         
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Way to go kid! You completed some more volunteer hours!"  delegate:self cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
+    [alert show];
+
+    
    /*      //Query to remove job from Jobs class
          PFQuery *query = [PFQuery queryWithClassName:@"Jobs"];
          [query whereKey:@"objectId" equalTo:[passedArray objectAtIndex:7]];
@@ -165,22 +156,31 @@
         
         
         
-    }
+  
 }
-
-
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    // Was there an error?
-    if (error != NULL)
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Image could not be saved.Please try again"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
-        [alert show];
-    } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Image was successfully saved in photo album"  delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Close", nil];
-        [alert show];
+    if(buttonIndex == 0){
+        NSLog(@"AlertView Ok has been clicked");
+       
+        
+        
+    }else{
+    
+    
+    
     }
+
 }
+        // Do something
+      
+
+
+
+
+
+
+
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     

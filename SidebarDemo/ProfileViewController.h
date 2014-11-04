@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *username;
 @property (weak, nonatomic) IBOutlet UILabel *hoursCompleted;
+@property (weak, nonatomic) IBOutlet UIButton *volunteerForm;
 
 - (IBAction)saveHoursPDF:(id)sender;
 
