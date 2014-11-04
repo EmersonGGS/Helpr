@@ -40,7 +40,7 @@
     UIColor *bgColour = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1];
     self.view.backgroundColor = bgColour;
     
-
+    
     
     titleLabel.text = [passedArray objectAtIndex:0];
     addressLabel.text = [passedArray objectAtIndex:4];
@@ -56,7 +56,7 @@
     
     _accept.layer.cornerRadius = 5;
     _accept.layer.masksToBounds = YES;
-
+    
     _decline.backgroundColor = [UIColor colorWithRed:0.933 green:0.333 blue:0.396 alpha:1];
     
     _decline.layer.cornerRadius = 5;
@@ -86,7 +86,7 @@
 - (IBAction)acceptJob:(id)sender {
     
     UIAlertView* thanks = [[UIAlertView alloc] initWithTitle:@"Accepted!"
-                                                message:@"Wicked! Thanks for accepting this job. Don't forget to get your employers signature at the end" delegate:self cancelButtonTitle:@"Yeah, no Biggie." otherButtonTitles: nil];
+                                                     message:@"Wicked! Thanks for accepting this job. Don't forget to get your employers signature at the end" delegate:self cancelButtonTitle:@"Yeah, no Biggie." otherButtonTitles: nil];
     [thanks show];
     
     PFUser *currentUser = [PFUser currentUser];
@@ -100,6 +100,7 @@
     ongoingObj[@"phoneNumber"] = [passedArray objectAtIndex:6];
     ongoingObj[@"workerEmail"] = currentUser.email;
     ongoingObj[@"notes"] = [passedArray objectAtIndex:5];
+    ongoingObj[@"employerName"] = [passedArray objectAtIndex:8];
     [ongoingObj saveInBackground];
     
     //Query to remove job from Jobs class

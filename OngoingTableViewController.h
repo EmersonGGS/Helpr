@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSMutableArray *phoneArray;
 @property (strong, nonatomic) NSMutableArray *notesArray;
 @property (strong, nonatomic) NSMutableArray *objectIdArray;
+@property (strong, nonatomic) NSMutableArray *namesArray;
 @property(nonatomic,strong)NSMutableArray *contentArray;
 
 @end

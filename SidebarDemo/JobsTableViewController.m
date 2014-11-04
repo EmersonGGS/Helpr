@@ -55,6 +55,7 @@
     self.addressArray = [[NSMutableArray alloc] init];
     self.notesArray = [[NSMutableArray alloc] init];
     self.phoneArray = [[NSMutableArray alloc] init];
+    self.namesArray = [[NSMutableArray alloc] init];
     self.objectIdArray = [[NSMutableArray alloc] init];
     contentArray = [[NSMutableArray alloc] init];
     
@@ -74,6 +75,7 @@
                 NSString *notesString = object[@"notes"];
                 NSString *phoneString = object[@"phoneNumber"];
                 NSString *objectIdString = object.objectId;
+                NSString *nameString = object[@"employerName"];
                 
                 //add initialized vars into appropriate arrays
                 [self.titlesArray addObject:titleString];
@@ -84,6 +86,7 @@
                 [self.notesArray addObject:notesString];
                 [self.phoneArray addObject:phoneString];
                 [self.objectIdArray addObject:objectIdString];
+                [self.namesArray addObject:nameString];
             }
             [self.tableView reloadData];
         } else {
@@ -91,8 +94,8 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-
-
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -138,7 +141,7 @@
 
 // Tap on table Row
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
-
+    
     [contentArray addObject:[self.titlesArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.dateArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.timeArray objectAtIndex:indexPath.row]];
@@ -147,6 +150,7 @@
     [contentArray addObject:[self.notesArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.phoneArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.objectIdArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.namesArray objectAtIndex:indexPath.row]];
     
     NSLog(@"%@", contentArray);
     [self performSegueWithIdentifier: @"acceptJob" sender: self];

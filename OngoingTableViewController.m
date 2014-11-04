@@ -50,9 +50,9 @@
     
     PFUser *currentUser = [PFUser currentUser];
     
-
     
-
+    
+    
     
     
     self.titlesArray = [[NSMutableArray alloc] init];
@@ -63,6 +63,7 @@
     self.notesArray = [[NSMutableArray alloc] init];
     self.phoneArray = [[NSMutableArray alloc] init];
     self.objectIdArray = [[NSMutableArray alloc] init];
+    self.namesArray = [[NSMutableArray alloc] init];
     contentArray = [[NSMutableArray alloc] init];
     
     PFQuery *updateTableArray = [PFQuery queryWithClassName:@"Ongoing"];
@@ -82,6 +83,7 @@
                 NSString *notesString = object[@"notes"];
                 NSString *phoneString = object[@"phoneNumber"];
                 NSString *objectIdString = object.objectId;
+                NSString *nameString = object[@"employerName"];
                 
                 //add initialized vars into appropriate arrays
                 [self.titlesArray addObject:titleString];
@@ -92,6 +94,7 @@
                 [self.notesArray addObject:notesString];
                 [self.phoneArray addObject:phoneString];
                 [self.objectIdArray addObject:objectIdString];
+                [self.namesArray addObject:nameString];
             }
             [self.tableView reloadData];
         } else {
@@ -152,6 +155,7 @@
     [contentArray addObject:[self.notesArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.phoneArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.objectIdArray objectAtIndex:indexPath.row]];
+    [contentArray addObject:[self.namesArray objectAtIndex:indexPath.row]];
     
     [self performSegueWithIdentifier: @"ongoingOptionsSegue" sender:self];
 }

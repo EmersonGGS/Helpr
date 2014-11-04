@@ -506,7 +506,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cM1-A7-aIK" userLabel="tempDrawImage">
-                                <rect key="frame" x="0.0" y="-6" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByR-og-seK">
@@ -755,7 +755,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Q5s-fo-o3D"/>
-        <segue reference="69F-dz-pQt"/>
+        <segue reference="ClB-BR-96l"/>
         <segue reference="iyx-Is-btj"/>
     </inferredMetricsTieBreakers>
 </document>

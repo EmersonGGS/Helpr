@@ -16,6 +16,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *hoursCompleted;
 @property (weak, nonatomic) IBOutlet UIButton *volunteerForm;
 
+@property (strong, nonatomic) NSMutableArray *titlesArray;
+@property (strong, nonatomic) NSMutableArray *dateArray;
+@property (strong, nonatomic) NSMutableArray *timeArray;
+@property (strong, nonatomic) NSMutableArray *hoursArray;
+@property (strong, nonatomic) NSMutableArray *addressArray;
+@property (strong, nonatomic) NSMutableArray *phoneArray;
+@property (strong, nonatomic) NSMutableArray *nameArray;
+
 - (IBAction)saveHoursPDF:(id)sender;
 
 @end

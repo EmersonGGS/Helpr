@@ -11,9 +11,7 @@
 #import <Parse/Parse.h>
 #import "SignatureViewController.h"
 
-
 @interface OngoingOptionsViewController ()
-
 
 @end
 
@@ -47,7 +45,7 @@
     _sidebarButton.action = @selector(revealToggle:);
     _sidebarButton.tintColor = [UIColor whiteColor];
     
-
+    
     
     self.cancelBtn.backgroundColor = [UIColor colorWithRed:0.933 green:0.333 blue:0.396 alpha:1];
     self.phoneBtn.backgroundColor = [UIColor colorWithRed:0.357 green:0.761 blue:0.655 alpha:1];
@@ -74,16 +72,7 @@
 
 - (IBAction)signatureBtnFunction:(id)sender {
     [self performSegueWithIdentifier: @"signatureSegue" sender:self];
-       [_signatureBtn setAlpha:0.42];
-}
-
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"signatureSegue"]) {
-        SignatureViewController *transferViewController = segue.destinationViewController;
-        transferViewController.completedJobArray = [[NSMutableArray alloc]init];
-        transferViewController.completedJobArray = self.passedArray;
-    }
+    [_signatureBtn setAlpha:0.42];
 }
 
 //phone the job
@@ -91,9 +80,11 @@
     NSString *jobPhoneNumber = [self.passedArray objectAtIndex:6];
     NSString *numToCall = [@"tel:" stringByAppendingString:jobPhoneNumber];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:numToCall]];
-       [_phoneBtn setAlpha:0.42];
+    [_phoneBtn setAlpha:0.42];
     
 }
+
+
 
 //User no longer wants the job
 - (IBAction)cancelBtnFunction:(id)sender {
@@ -107,10 +98,15 @@
     [alert show];
     [_cancelBtn setAlpha:0.42];
     
-    
+}
 
-    
-    
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"signatureSegue"]) {
+        SignatureViewController *transferViewController = segue.destinationViewController;
+        transferViewController.completedJobArray = [[NSMutableArray alloc]init];
+        transferViewController.completedJobArray = self.passedArray;
+    }
 }
 
 
@@ -125,7 +121,7 @@
         else
         {
             NSLog(@"user pressed Button Indexed 1");
-          
+            
             PFQuery *query = [PFQuery queryWithClassName:@"Ongoing"];
             [query getObjectInBackgroundWithId:[self.passedArray objectAtIndex:7] block:^(PFObject *object, NSError *error) {
                 // Do something with the returned PFObject in the gameScore variable.
@@ -136,7 +132,7 @@
                 [self performSegueWithIdentifier: @"cancelJobSegue" sender:self];
                 
             }];
-            
+            NSLog(@"ARRAY: %@", self.passedArray);
             //putting job back in bank so it can be accepted by a different user
             PFObject *revertJob = [PFObject objectWithClassName:@"Jobs"];
             revertJob[@"title"] = [self.passedArray objectAtIndex:0];
@@ -146,15 +142,16 @@
             revertJob[@"address"] = [self.passedArray objectAtIndex:4];
             revertJob[@"notes"] = [self.passedArray objectAtIndex:5];
             revertJob[@"phoneNumber"] = [self.passedArray objectAtIndex:6];
+            revertJob[@"employerName"] = [self.passedArray objectAtIndex:8];
             
             [revertJob saveInBackground];
             
-        
+            
             
             
         }
     }
-
+    
 }
 
 

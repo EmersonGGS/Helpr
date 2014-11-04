@@ -59,6 +59,50 @@
     
     _volunteerForm.layer.cornerRadius = 5;
     _volunteerForm.layer.masksToBounds = YES;
+    //Getting current user for query
+    PFUser *currentUser = [PFUser currentUser];
+    
+    self.titlesArray = [[NSMutableArray alloc] init];
+    self.dateArray = [[NSMutableArray alloc] init];
+    self.timeArray = [[NSMutableArray alloc] init];
+    self.hoursArray = [[NSMutableArray alloc] init];
+    self.addressArray = [[NSMutableArray alloc] init];
+    self.phoneArray = [[NSMutableArray alloc] init];
+    self.nameArray = [[NSMutableArray alloc] init];
+    
+    //Query for completed jobs from signed in user
+    PFQuery *query = [PFQuery queryWithClassName:@"Completed"];
+    [query whereKey:@"workerEmail" equalTo:currentUser.email];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {            // The find succeeded.
+            NSLog(@"Successfully retrieved %d objects.", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                
+                //Init variables from parse
+                NSString *titleString = object[@"title"];
+                NSString *dateString = object[@"date"];
+                NSString *timeString = object[@"startTime"];
+                NSString *hoursString = object[@"numofHours"];
+                NSString *addressString = object[@"address"];
+                NSString *phoneString = object[@"phoneNumber"];
+                NSString *nameString = object[@"employerName"];
+                
+                //add initialized vars into appropriate arrays
+                [self.titlesArray addObject:titleString];
+                [self.dateArray addObject:dateString];
+                [self.timeArray addObject:timeString];
+                [self.hoursArray addObject:hoursString];
+                [self.addressArray addObject:addressString];
+                [self.phoneArray addObject:phoneString];
+                [self.nameArray addObject:nameString];
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
     
 }
 
@@ -67,10 +111,14 @@
 }
 
 - (IBAction)saveHoursPDF:(id)sender {
-
+    
     [self setupPDFDocumentNamed:@"HelprHours" Width:2550 Height:3300];
     
     [self beginPDFPage];
+    
+    ///////////////
+    //PDF Header//
+    /////////////
     
     //header bg bar
     CGRect headerDivider = [self addLineWithFrame:CGRectMake(0, 0, _pageSize.width, 450)
@@ -79,6 +127,11 @@
     UIImage *anImage = [UIImage imageNamed:@"helpr-logo.png"];
     CGRect imageRect = [self addImage:anImage
                               atPoint:CGPointMake((_pageSize.width/2)-(anImage.size.width/2), kPadding)];
+    
+    /////////////////////
+    //User Information//
+    ///////////////////
+    
     //School name
     CGRect schoolTitleRect = [self addText:@"Emerson George Stewart"
                                  withFrame:CGRectMake(kPadding+10, (imageRect.origin.y+imageRect.size.height+kPadding), (_pageSize.width/2), 150) fontSize:72.0f];
@@ -89,8 +142,10 @@
     CGRect hoursTitleRect = [self addText:@"Volunteer Work Completed"
                                 withFrame:CGRectMake((kPadding+10), (studentTitleRect.origin.y+studentTitleRect.size.height+kPadding+60), 400, 200) fontSize:62.0f];
     
+    ///////////////////
+    //TABLE HEADINGS//
+    /////////////////
     
-    //TABLE HEADINGS
     //Job Heading
     CGRect jobsHeadingRect = [self addText:@"Job Title"
                                  withFrame:CGRectMake((kPadding+130), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+80), 100, 250) fontSize:62.0f];
@@ -115,11 +170,11 @@
     /////////////////
     
     //Top Line
-    [self addLineWithFrame:CGRectMake((kPadding+100), jobsHeadingRect.origin.y-15, (_pageSize.width-320), 8)
+    [self addLineWithFrame:CGRectMake((kPadding+100), jobsHeadingRect.origin.y-15, (_pageSize.width-200), 8)
                  withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
     
     //Top Line - Inside
-    [self addLineWithFrame:CGRectMake((kPadding+100), jobsHeadingRect.origin.y+jobsHeadingRect.size.height+15, (_pageSize.width-320), 5)
+    [self addLineWithFrame:CGRectMake((kPadding+100), jobsHeadingRect.origin.y+jobsHeadingRect.size.height+15, (_pageSize.width-200), 5)
                  withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
     
     //Left Line
@@ -128,11 +183,11 @@
     
     
     //Right Line
-    [self addLineWithFrame:CGRectMake((kPadding+100+_pageSize.width-330), jobsHeadingRect.origin.y+985, 8, 2000)
+    [self addLineWithFrame:CGRectMake((kPadding+100+_pageSize.width-208), jobsHeadingRect.origin.y+985, 8, 2000)
                  withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
     
     //Bottom Line
-    [self addLineWithFrame:CGRectMake((kPadding+100), (jobsHeadingRect.origin.y-15+2000), (_pageSize.width-320), 8)
+    [self addLineWithFrame:CGRectMake((kPadding+100), (jobsHeadingRect.origin.y-15+2000), (_pageSize.width-200), 8)
                  withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
     
     ///////////////////
@@ -161,6 +216,42 @@
     
     
     //CGRect imageRect = [self addImage:anImage atPoint:CGPointMake((_pageSize.width/2)-(anImage.size.width/2), headerDivider.origin.y + headerDivider.size.height + kPadding)];
+    
+    
+    //////////////////
+    //Fill out Form//
+    ////////////////
+    
+    
+    for (int i = 0; i < self.titlesArray.count; i++) {
+        NSLog(@"This has ran %i", i);
+        
+        //Job Title
+        CGRect completedTitle = [self addText:[self.titlesArray objectAtIndex:i]
+                                    withFrame:CGRectMake((kPadding+130), (jobsHeadingRect.origin.y+jobsHeadingRect.size.height+kPadding+40+(120*i)), 100, 250) fontSize:38.0f];
+        
+        //Employers Name
+        CGRect completedEmployer = [self addText:[self.nameArray objectAtIndex:i]
+                                       withFrame:CGRectMake((jobsHeadingRect.origin.x + jobsHeadingRect.size.width + 120), (employerHeadingRect.origin.y+employerHeadingRect.size.height+kPadding+40+(120*i)), 100, 250) fontSize:38.0f];
+        //Hours
+        CGRect completedHours = [self addText:[self.hoursArray objectAtIndex:i]
+                                    withFrame:CGRectMake((employerHeadingRect.origin.x + employerHeadingRect.size.width + 120), (hoursHeadingRect.origin.y+hoursHeadingRect.size.height+kPadding+40+(120*i)), 100, 250) fontSize:38.0f];
+        
+        //Date
+        CGRect completedDate = [self addText:[self.dateArray objectAtIndex:i]
+                                   withFrame:CGRectMake((hoursHeadingRect.origin.x + hoursHeadingRect.size.width + 120), (dateHeadingRect.origin.y+dateHeadingRect.size.height+kPadding+40+(120*i)), 100, 250) fontSize:38.0f];
+        
+        //Phone Number
+        CGRect completedPhone = [self addText:[self.phoneArray objectAtIndex:i]
+                                    withFrame:CGRectMake((dateHeadingRect.origin.x + dateHeadingRect.size.width + 120), (dateHeadingRect.origin.y+dateHeadingRect.size.height+kPadding+40+(120*i)), 100, 250) fontSize:38.0f];
+        
+        
+        //Top Line - Inside
+        [self addLineWithFrame:CGRectMake((kPadding+100), completedTitle.origin.y+completedTitle.size.height+15, (_pageSize.width-200), 5)
+                     withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
+    }
+    
+    
     
     [self finishPDF];
     NSString *selectedFile = @"HelprHours.pdf";
