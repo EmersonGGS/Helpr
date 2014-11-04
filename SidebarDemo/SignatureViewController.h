@@ -29,4 +29,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *reset;
 @property (weak, nonatomic) IBOutlet UIButton *save;
 
+@property (strong, nonatomic) NSMutableArray *completedJobArray;
+
 @end

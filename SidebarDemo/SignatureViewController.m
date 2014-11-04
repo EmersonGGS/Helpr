@@ -8,6 +8,7 @@
 
 #import "SignatureViewController.h"
 #import "SWRevealViewController.h"
+#import <Parse/Parse.h>
 
 @interface SignatureViewController ()
 
@@ -17,11 +18,15 @@
 
 @synthesize mainImage;
 @synthesize tempDrawImage;
+@synthesize completedJobArray;
 
 - (void)viewDidLoad
 {
     
     [super viewDidLoad];
+    
+    
+    NSLog(@"passed data: %@", self.completedJobArray);
     
     UIColor *bgColour = [UIColor colorWithRed:0.925 green:0.941 blue:0.945 alpha:1];
     self.view.backgroundColor = bgColour;
@@ -49,13 +54,7 @@
     
       _save.backgroundColor = [UIColor colorWithRed:0.18 green:0.8 blue:0.443 alpha:1];
     _reset.backgroundColor = [UIColor colorWithRed:0.18 green:0.8 blue:0.443 alpha:1];
-    
 
-    
-    
-    
-    
-    
     }
 
 - (void)viewDidUnload
@@ -101,8 +100,11 @@
                                                              delegate:self
                                                     cancelButtonTitle:nil
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Save to Camera Roll", @"Cancel", nil];
+                                                    otherButtonTitles:@"Save Signature", @"Cancel", nil];
     [actionSheet showInView:self.view];
+    
+    
+    
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -111,38 +113,61 @@
         
         UIGraphicsBeginImageContextWithOptions(self.mainImage.bounds.size, NO, 0.0);
         [self.mainImage.image drawInRect:CGRectMake(0, 0, self.mainImage.frame.size.width, self.mainImage.frame.size.height)];
+       
         UIImage *SaveImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        UIImageWriteToSavedPhotosAlbum(SaveImage, self,@selector(image:didFinishSavingWithError:contextInfo:), nil);
+        NSData *imageData = UIImagePNGRepresentation(SaveImage);
+        
+        PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+        
+        //PFObject *userPhoto = [PFObject objectWithClassName:@"Signatures"];
+       // userPhoto[@"Signature"] = imageFile;
+      //  [userPhoto saveInBackground];
+  
         
         
-        
-        
-        
-        
-        
-        
-        /*
-         NSData *imageSave = UIImagePNGRepresentation(SaveImage);
-         //PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+    
          
-         NSObject *userPhoto = [PFObject objectWithClassName:@"Ongoing"];
-         userPhoto[@"imageName"] = @"My trip to Hawaii!";
-         userPhoto[@"imageFile"] = imageFile;
-         [userPhoto saveInBackground];
          
-         */
+        NSLog(@"array: %@", self.completedJobArray);
+         PFUser *currentUser = [PFUser currentUser];
+         
+         PFObject *completedObj = [PFObject objectWithClassName:@"Completed"];
+         completedObj[@"address"] = [completedJobArray objectAtIndex:4];
+         completedObj[@"date"] = [completedJobArray objectAtIndex:1];
+         completedObj[@"startTime"] = [completedJobArray objectAtIndex:2];
+         completedObj[@"title"] = [completedJobArray objectAtIndex:0];
+         completedObj[@"numofHours"] = [completedJobArray objectAtIndex:3];
+         completedObj[@"phoneNumber"] = [completedJobArray objectAtIndex:6];
+         completedObj[@"workerEmail"] = currentUser.email;
+         completedObj[@"notes"] = [completedJobArray objectAtIndex:5];
+         
+         completedObj[@"signature"] = imageFile;
+         [completedObj saveInBackground];
         
-        
-        
-        
-        
-        
+   /*      //Query to remove job from Jobs class
+         PFQuery *query = [PFQuery queryWithClassName:@"Jobs"];
+         [query whereKey:@"objectId" equalTo:[passedArray objectAtIndex:7]];
+         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+         if (!error) {
+         // The find succeeded.
+         NSLog(@"Successfully retrieved %d scores.", objects.count);
+         // Do something with the found objects
+         for (PFObject *object in objects) {
+         [object deleteInBackground];
+         }
+         } else {
+         // Log details of the failure
+         NSLog(@"Error: %@ %@", error, [error userInfo]);
+         }
+         
+         }];
+        */
         
         
         
     }
 }
+
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
 {

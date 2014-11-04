@@ -6,20 +6,14 @@
 //  Copyright (c) 2014 Appcoda. All rights reserved.
 //
 
-
-
-
-
-
-
-
-
-
 #import "OngoingOptionsViewController.h"
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
+#import "SignatureViewController.h"
+
 
 @interface OngoingOptionsViewController ()
+
 
 @end
 
@@ -81,6 +75,15 @@
 - (IBAction)signatureBtnFunction:(id)sender {
     [self performSegueWithIdentifier: @"signatureSegue" sender:self];
        [_signatureBtn setAlpha:0.42];
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"signatureSegue"]) {
+        SignatureViewController *transferViewController = segue.destinationViewController;
+        transferViewController.completedJobArray = [[NSMutableArray alloc]init];
+        transferViewController.completedJobArray = self.passedArray;
+    }
 }
 
 //phone the job
