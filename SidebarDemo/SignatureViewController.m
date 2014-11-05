@@ -127,9 +127,9 @@
     [alert show];
 
     
-   /*      //Query to remove job from Jobs class
-         PFQuery *query = [PFQuery queryWithClassName:@"Jobs"];
-         [query whereKey:@"objectId" equalTo:[passedArray objectAtIndex:7]];
+        //Query to remove job from ongoing class
+         PFQuery *query = [PFQuery queryWithClassName:@"Ongoing"];
+         [query whereKey:@"objectId" equalTo:[completedJobArray objectAtIndex:7]];
          [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
          if (!error) {
          // The find succeeded.
@@ -144,7 +144,7 @@
          }
          
          }];
-        */
+    
         
         
         
