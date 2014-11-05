@@ -127,11 +127,12 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"JobTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    
+    NSString *hourLabel = @"Hours: ";
+    NSString *combined = [NSString stringWithFormat:@"%@%@", hourLabel, [self.hoursArray objectAtIndex:indexPath.row]];
     cell.titleLabel.text = [self.titlesArray objectAtIndex:indexPath.row];
     cell.dateTimeLabel.text = [self.dateArray objectAtIndex:indexPath.row];
     cell.timeLabel.text = [self.timeArray objectAtIndex:indexPath.row];
-    cell.hoursTimeLabel.text = [self.hoursArray objectAtIndex:indexPath.row];
+    cell.hoursTimeLabel.text = combined;
     cell.addressLabel.text = [self.addressArray objectAtIndex:indexPath.row];
     
     NSLog(@"address %@", cell.addressLabel.text);
