@@ -23,6 +23,9 @@
 @property (strong, nonatomic) NSMutableArray *addressArray;
 @property (strong, nonatomic) NSMutableArray *phoneArray;
 @property (strong, nonatomic) NSMutableArray *nameArray;
+@property (strong, nonatomic) NSMutableArray *signatureArray;
+
+@property (strong,nonatomic) UIImage *thisSignatureImage;
 
 - (IBAction)saveHoursPDF:(id)sender;
 

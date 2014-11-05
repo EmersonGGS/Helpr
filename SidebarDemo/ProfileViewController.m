@@ -69,6 +69,8 @@
     self.addressArray = [[NSMutableArray alloc] init];
     self.phoneArray = [[NSMutableArray alloc] init];
     self.nameArray = [[NSMutableArray alloc] init];
+    self.signatureArray = [[NSMutableArray alloc] init];
+    
     
     //Query for completed jobs from signed in user
     PFQuery *query = [PFQuery queryWithClassName:@"Completed"];
@@ -87,6 +89,14 @@
                 NSString *addressString = object[@"address"];
                 NSString *phoneString = object[@"phoneNumber"];
                 NSString *nameString = object[@"employerName"];
+                PFFile *parseFileSig = object[@"signature"];
+                [parseFileSig getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                    if (!error) {
+                        UIImage *image = [UIImage imageWithData:imageData];
+                        [self.signatureArray addObject:image];
+                    }
+                }];
+                UIImage *parseSignature = object[@"signature"];
                 
                 //add initialized vars into appropriate arrays
                 [self.titlesArray addObject:titleString];
@@ -96,6 +106,9 @@
                 [self.addressArray addObject:addressString];
                 [self.phoneArray addObject:phoneString];
                 [self.nameArray addObject:nameString];
+                
+                NSLog(@"Images array? %@", self.signatureArray);
+                
             }
         } else {
             // Log details of the failure
@@ -245,8 +258,11 @@
         CGRect completedPhone = [self addText:[self.phoneArray objectAtIndex:i]
                                     withFrame:CGRectMake((dateHeadingRect.origin.x + dateHeadingRect.size.width + 120), (dateHeadingRect.origin.y+dateHeadingRect.size.height+kPadding+40+(120*i)), 100, 250) fontSize:38.0f];
         
-        
-        //Top Line - Inside
+        //header HELPR img
+        UIImage *signatureImg = [self.signatureArray objectAtIndex:i];
+        CGRect imageRect = [self addImage:signatureImg
+                                  atPoint:CGPointMake((_pageSize.width/2)-(anImage.size.width/2), kPadding)];
+             //Top Line - Inside
         [self addLineWithFrame:CGRectMake((kPadding+100), completedTitle.origin.y+completedTitle.size.height+15, (_pageSize.width-200), 5)
                      withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
     }

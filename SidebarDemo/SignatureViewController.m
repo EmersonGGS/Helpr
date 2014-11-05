@@ -105,15 +105,6 @@
         NSData *imageData = UIImagePNGRepresentation(SaveImage);
         
         PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
-        
-        //PFObject *userPhoto = [PFObject objectWithClassName:@"Signatures"];
-       // userPhoto[@"Signature"] = imageFile;
-      //  [userPhoto saveInBackground];
-  
-        
-        
-    
-         
          
         NSLog(@"array: %@", self.completedJobArray);
          PFUser *currentUser = [PFUser currentUser];
@@ -127,6 +118,7 @@
          completedObj[@"phoneNumber"] = [completedJobArray objectAtIndex:6];
          completedObj[@"workerEmail"] = currentUser.email;
          completedObj[@"notes"] = [completedJobArray objectAtIndex:5];
+        completedObj[@"employerName"] = [completedJobArray objectAtIndex:8];
          
          completedObj[@"signature"] = imageFile;
          [completedObj saveInBackground];
