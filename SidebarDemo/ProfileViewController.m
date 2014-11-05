@@ -139,7 +139,7 @@
     //header HELPR img
     UIImage *anImage = [UIImage imageNamed:@"helpr-logo.png"];
     CGRect imageRect = [self addImage:anImage
-                              atPoint:CGPointMake((_pageSize.width/2)-(anImage.size.width/2), kPadding)];
+                              withFrame:CGRectMake((_pageSize.width/2)-(anImage.size.width/2), kPadding, 400, 400)];
     
     /////////////////////
     //User Information//
@@ -259,9 +259,10 @@
                                     withFrame:CGRectMake((dateHeadingRect.origin.x + dateHeadingRect.size.width + 120), (dateHeadingRect.origin.y+dateHeadingRect.size.height+kPadding+40+(120*i)), 100, 250) fontSize:38.0f];
         
         //header HELPR img
-        UIImage *signatureImg = [self.signatureArray objectAtIndex:i];
+        UIImage *unflippedSig = [self.signatureArray objectAtIndex:i];
+        UIImage *signatureImg = [UIImage imageWithCGImage:unflippedSig.CGImage scale:1.0 orientation:UIImageOrientationLeft];
         CGRect imageRect = [self addImage:signatureImg
-                                  atPoint:CGPointMake((_pageSize.width/2)-(anImage.size.width/2), kPadding)];
+                                  withFrame:CGRectMake((phoneHeadingRect.origin.x + phoneHeadingRect.size.width + 120), (hoursTitleRect.origin.y+hoursTitleRect.size.height+kPadding+160+(120*i)),250,100)];
              //Top Line - Inside
         [self addLineWithFrame:CGRectMake((kPadding+100), completedTitle.origin.y+completedTitle.size.height+15, (_pageSize.width-200), 5)
                      withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
@@ -341,8 +342,8 @@
     return frame;
 }
 
-- (CGRect)addImage:(UIImage*)image atPoint:(CGPoint)point {
-    CGRect imageFrame = CGRectMake(point.x, point.y, image.size.width, image.size.height);
+- (CGRect)addImage:(UIImage*)image withFrame:(CGRect)frame {
+    CGRect imageFrame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     [image drawInRect:imageFrame];
     
     return imageFrame;
