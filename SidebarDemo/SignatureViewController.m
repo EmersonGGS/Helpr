@@ -92,9 +92,6 @@
     
 }
 
-
-
-
 - (IBAction)save:(id)sender {
 
         
@@ -154,8 +151,7 @@
 {
     if(buttonIndex == 0){
         NSLog(@"AlertView Ok has been clicked");
-       
-        
+        [self dismissViewControllerAnimated:YES completion:nil];
         
     }else{
     

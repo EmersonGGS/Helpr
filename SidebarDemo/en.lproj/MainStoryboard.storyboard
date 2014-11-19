@@ -425,7 +425,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signatureBtnFunction:" destination="gS1-Xj-vEj" eventType="touchUpInside" id="4DD-A2-Ewd"/>
-                                    <segue destination="lI7-DF-Fvq" kind="push" identifier="signatureSegue" id="q6U-fY-k8n"/>
+                                    <segue destination="lI7-DF-Fvq" kind="modal" identifier="signatureSegue" id="q6U-fY-k8n"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na8-EW-bTO">

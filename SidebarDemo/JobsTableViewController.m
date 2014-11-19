@@ -126,6 +126,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"JobTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+    //create for display purposes
     NSString *hourLabel = @"Hours: ";
     NSString *combined = [NSString stringWithFormat:@"%@%@", hourLabel, [self.hoursArray objectAtIndex:indexPath.row]];
     cell.titleLabel.text = [self.titlesArray objectAtIndex:indexPath.row];

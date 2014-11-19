@@ -133,6 +133,7 @@
         cell = [nib objectAtIndex:0];
     }
     
+    //create for display purposes
     NSString *hourLabel = @"Hours: ";
     
     cell.titleLabel.text = [self.titlesArray objectAtIndex:indexPath.row];

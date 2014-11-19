@@ -19,6 +19,7 @@
     BOOL mouseSwiped;
     
 }
+
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundText;
 
 @property (weak, nonatomic) IBOutlet UIImageView *mainImage;
