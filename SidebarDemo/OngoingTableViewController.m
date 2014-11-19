@@ -133,10 +133,12 @@
         cell = [nib objectAtIndex:0];
     }
     
+    NSString *hourLabel = @"Hours: ";
+    
     cell.titleLabel.text = [self.titlesArray objectAtIndex:indexPath.row];
     cell.dateTimeLabel.text = [self.dateArray objectAtIndex:indexPath.row];
     cell.timeLabel.text = [self.timeArray objectAtIndex:indexPath.row];
-    cell.hoursTimeLabel.text = [self.hoursArray objectAtIndex:indexPath.row];
+    cell.hoursTimeLabel.text = [NSString stringWithFormat:@"%@%@", hourLabel, [self.hoursArray objectAtIndex:indexPath.row]];;
     cell.addressLabel.text = [self.addressArray objectAtIndex:indexPath.row];
     
     NSLog(@"address %@", cell.addressLabel.text);

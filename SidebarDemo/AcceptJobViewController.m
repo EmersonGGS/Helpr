@@ -48,13 +48,14 @@
     hoursLabel.text = @"";
     notesLabel.text = @"";
     
+    NSString *hourLabel = @"Hours: ";
     
     
     titleLabel.text = [passedArray objectAtIndex:0];
     addressLabel.text = [passedArray objectAtIndex:4];
     timeLabel.text = [passedArray objectAtIndex:2];
     dateLabel.text = [passedArray objectAtIndex:1];
-    hoursLabel.text = [passedArray objectAtIndex:3];
+    hoursLabel.text = [NSString stringWithFormat:@"%@%@", hourLabel, [passedArray objectAtIndex:3]];
     notesLabel.text = [passedArray objectAtIndex:5];
     
     
