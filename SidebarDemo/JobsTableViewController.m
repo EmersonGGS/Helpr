@@ -57,7 +57,6 @@
     self.phoneArray = [[NSMutableArray alloc] init];
     self.namesArray = [[NSMutableArray alloc] init];
     self.objectIdArray = [[NSMutableArray alloc] init];
-    contentArray = [[NSMutableArray alloc] init];
     
     PFQuery *updateTableArray = [PFQuery queryWithClassName:@"Jobs"];
     [updateTableArray findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -143,6 +142,10 @@
 // Tap on table Row
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
     
+    //clear content
+    contentArray = [[NSMutableArray alloc] init];
+    
+    //set new content
     [contentArray addObject:[self.titlesArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.dateArray objectAtIndex:indexPath.row]];
     [contentArray addObject:[self.timeArray objectAtIndex:indexPath.row]];

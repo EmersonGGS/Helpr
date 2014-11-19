@@ -40,6 +40,14 @@
     UIColor *bgColour = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1];
     self.view.backgroundColor = bgColour;
     
+    //clear fields
+    titleLabel.text = @"";
+    addressLabel.text = @"";
+    timeLabel.text = @"";
+    dateLabel.text = @"";
+    hoursLabel.text = @"";
+    notesLabel.text = @"";
+    
     
     
     titleLabel.text = [passedArray objectAtIndex:0];
