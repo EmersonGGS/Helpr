@@ -16,6 +16,7 @@
 		6515F10E1A1CE8270011B0DB /* OngoingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6515F10D1A1CE8270011B0DB /* OngoingTableViewController.m */; };
 		653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 653CEA0D19F089F400E9A3FD /* helpr-logo.png */; };
 		653CEA1119F092F800E9A3FD /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1019F092F800E9A3FD /* ProfileViewController.m */; };
+		654D95B41A242FF500AFAC25 /* signatureLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 654D95B31A242FF500AFAC25 /* signatureLine.png */; };
 		659F2D1F1A0687190059DF0C /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 659F2D1E1A0687190059DF0C /* cancel.png */; };
 		659F2D291A0692710059DF0C /* callBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 659F2D281A0692710059DF0C /* callBtn.png */; };
 		659F2D311A069A270059DF0C /* pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 659F2D301A069A270059DF0C /* pen.png */; };
@@ -81,6 +82,7 @@
 		653CEA0D19F089F400E9A3FD /* helpr-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "helpr-logo.png"; sourceTree = "<group>"; };
 		653CEA0F19F092F800E9A3FD /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		653CEA1019F092F800E9A3FD /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		654D95B31A242FF500AFAC25 /* signatureLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signatureLine.png; sourceTree = "<group>"; };
 		659F2D1E1A0687190059DF0C /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		659F2D281A0692710059DF0C /* callBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callBtn.png; sourceTree = "<group>"; };
 		659F2D301A069A270059DF0C /* pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen.png; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		653CEA0A19F085DB00E9A3FD /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				654D95B31A242FF500AFAC25 /* signatureLine.png */,
 				65F046D91A087D130053D4E1 /* send.png */,
 				659F2D3A1A06B0BB0059DF0C /* timeIcon.png */,
 				659F2D3B1A06B0BB0059DF0C /* calendarIcon.png */,
@@ -370,6 +373,7 @@
 				653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */,
 				9746E51C18F9ACA8000755DE /* signUp.png in Resources */,
 				659F2D311A069A270059DF0C /* pen.png in Resources */,
+				654D95B41A242FF500AFAC25 /* signatureLine.png in Resources */,
 				630AB2181A0578AF00671068 /* acceptBtn.png in Resources */,
 				630AB2191A0578AF00671068 /* cancelBtn.png in Resources */,
 				9746E51E18F9AE93000755DE /* backbtn.png in Resources */,

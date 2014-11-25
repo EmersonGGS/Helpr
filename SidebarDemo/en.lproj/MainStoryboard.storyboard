@@ -493,14 +493,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Signature" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="29" translatesAutoresizingMaskIntoConstraints="NO" id="05R-Ku-BTe">
-                                <rect key="frame" x="151" y="56" width="29" height="360"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signatureLine.png" translatesAutoresizingMaskIntoConstraints="NO" id="raI-Ay-bFC">
+                                <rect key="frame" x="20" y="20" width="280" height="396"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="29"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="89"/>
-                            </label>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gsy-3N-F1o" userLabel="mainImage">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -754,6 +750,7 @@
         <image name="locationIcon.png" width="68" height="60"/>
         <image name="pen.png" width="21" height="44"/>
         <image name="send.png" width="44" height="44"/>
+        <image name="signatureLine.png" width="640" height="1136"/>
         <image name="timeIcon.png" width="60" height="62"/>
     </resources>
     <color key="tintColor" red="0.66666668653488159" green="0.79607850313186646" blue="0.65490198135375977" alpha="1" colorSpace="deviceRGB"/>
