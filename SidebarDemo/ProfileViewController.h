@@ -25,7 +25,10 @@
 @property (strong, nonatomic) NSMutableArray *nameArray;
 @property (strong, nonatomic) NSMutableArray *signatureArray;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property (strong, nonatomic) NSMutableArray *passedArray;
 @property (strong,nonatomic) UIImage *thisSignatureImage;
+@property (weak, nonatomic) IBOutlet UITableView *completedView;
 
 - (IBAction)saveHoursPDF:(id)sender;
 

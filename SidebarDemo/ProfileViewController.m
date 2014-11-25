@@ -10,17 +10,22 @@
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
 #import <MessageUI/MessageUI.h>
+#import "JobTableViewCell.h"
+#import "SignatureViewController.h"
 #define kPadding 20
 
 @interface ProfileViewController ()
 {
+    
+    NSMutableArray *contentArray;
     CGSize _pageSize;
+    int totalHoursCompleted;
 }
-
 
 @end
 
 @implementation ProfileViewController
+@synthesize passedArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,6 +60,24 @@
     _sidebarButton.action = @selector(revealToggle:);
     _sidebarButton.tintColor = [UIColor whiteColor];
    
+
+
+
+  
+    
+    
+    
+    //
+    //completed jobs table view
+    
+
+
+
+    
+    
+    
+    // end of completed table view
+    
     _volunteerForm.backgroundColor = [UIColor colorWithRed:0.357 green:0.761 blue:0.655 alpha:1];
     
     _volunteerForm.layer.cornerRadius = 5;
@@ -89,7 +112,21 @@
                 NSString *addressString = object[@"address"];
                 NSString *phoneString = object[@"phoneNumber"];
                 NSString *nameString = object[@"employerName"];
+                int tempCompHours = [hoursString intValue];
                 PFFile *parseFileSig = object[@"signature"];
+                
+                totalHoursCompleted = totalHoursCompleted + tempCompHours;
+                //output number of hours completed
+                
+               
+                
+                int total = totalHoursCompleted;
+                NSString *myHours = [NSString stringWithFormat:@"%d", total];
+                
+                
+                NSLog(@"%@", myHours);
+                 _hoursCompleted.text = myHours;
+                
                 [parseFileSig getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
                     if (!error) {
                         UIImage *image = [UIImage imageWithData:imageData];
@@ -107,7 +144,6 @@
                 [self.phoneArray addObject:phoneString];
                 [self.nameArray addObject:nameString];
                 
-                NSLog(@"Images array? %@", self.signatureArray);
                 
             }
         } else {
@@ -119,9 +155,49 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.titlesArray count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *jobCellIdentifier = @"JobViewCellid";
+    
+    JobTableViewCell *cell = (JobTableViewCell *)[tableView dequeueReusableCellWithIdentifier:jobCellIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"JobTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    
+    //create for display purposes
+    NSString *hourLabel = @"Hours: ";
+    
+    cell.titleLabel.text = [self.titlesArray objectAtIndex:indexPath.row];
+    cell.dateTimeLabel.text = [self.dateArray objectAtIndex:indexPath.row];
+    cell.timeLabel.text = [self.timeArray objectAtIndex:indexPath.row];
+    cell.hoursTimeLabel.text = [NSString stringWithFormat:@"%@%@", hourLabel, [self.hoursArray objectAtIndex:indexPath.row]];;
+    cell.addressLabel.text = [self.addressArray objectAtIndex:indexPath.row];
+    
+    NSLog(@"address %@", cell.addressLabel.text);
+    
+    return cell;
+}
+
+
 
 - (IBAction)saveHoursPDF:(id)sender {
     
