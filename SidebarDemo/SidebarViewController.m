@@ -32,7 +32,7 @@
       self.view.backgroundColor = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1];
      self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    menuItems = @[@"profile", @"jobs", @"ongoing"];
+    menuItems = @[@"profile", @"jobs", @"myjobs"];
     [UIImage imageNamed:@"helpr-logo.png"];
   
 }

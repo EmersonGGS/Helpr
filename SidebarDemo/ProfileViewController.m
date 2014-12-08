@@ -60,28 +60,18 @@
     _sidebarButton.action = @selector(revealToggle:);
     _sidebarButton.tintColor = [UIColor whiteColor];
    
-
-
-
-  
-    
-    
-    
-    //
-    //completed jobs table view
-    
-
-
-
-    
-    
     
     // end of completed table view
     
-    _volunteerForm.backgroundColor = [UIColor colorWithRed:0.357 green:0.761 blue:0.655 alpha:1];
+    _volunteerForm.backgroundColor = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]; /*#2c3e50*/
     
-    _volunteerForm.layer.cornerRadius = 5;
     _volunteerForm.layer.masksToBounds = YES;
+    
+    //style complete jobs
+    _completeBtn.backgroundColor = [UIColor colorWithRed:0.204 green:0.286 blue:0.369 alpha:1];/*#34495e*/
+    
+    _completeBtn.layer.masksToBounds = YES;
+    
     //Getting current user for query
     PFUser *currentUser = [PFUser currentUser];
     
@@ -161,43 +151,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.titlesArray count];
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *jobCellIdentifier = @"JobViewCellid";
-    
-    JobTableViewCell *cell = (JobTableViewCell *)[tableView dequeueReusableCellWithIdentifier:jobCellIdentifier];
-    if (cell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"JobTableViewCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-    
-    //create for display purposes
-    NSString *hourLabel = @"Hours: ";
-    
-    cell.titleLabel.text = [self.titlesArray objectAtIndex:indexPath.row];
-    cell.dateTimeLabel.text = [self.dateArray objectAtIndex:indexPath.row];
-    cell.timeLabel.text = [self.timeArray objectAtIndex:indexPath.row];
-    cell.hoursTimeLabel.text = [NSString stringWithFormat:@"%@%@", hourLabel, [self.hoursArray objectAtIndex:indexPath.row]];;
-    cell.addressLabel.text = [self.addressArray objectAtIndex:indexPath.row];
-    
-    NSLog(@"address %@", cell.addressLabel.text);
-    
-    return cell;
-}
-
-
 
 - (IBAction)saveHoursPDF:(id)sender {
     
@@ -304,9 +257,6 @@
                  withColor:[UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1]];
     
     
-    //CGRect imageRect = [self addImage:anImage atPoint:CGPointMake((_pageSize.width/2)-(anImage.size.width/2), headerDivider.origin.y + headerDivider.size.height + kPadding)];
-    
-    
     //////////////////
     //Fill out Form//
     ////////////////
@@ -350,6 +300,9 @@
     NSString *selectedFile = @"HelprHours.pdf";
     [self showEmail:selectedFile];
     
+}
+
+- (IBAction)completedJobs:(id)sender {
 }
 
 - (void)setupPDFDocumentNamed:(NSString*)name Width:(float)width Height:(float)height {

@@ -10,11 +10,12 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface ProfileViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate>
+@interface ProfileViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *username;
 @property (weak, nonatomic) IBOutlet UILabel *hoursCompleted;
 @property (weak, nonatomic) IBOutlet UIButton *volunteerForm;
+@property (strong, nonatomic) IBOutlet UIButton *completeBtn;
 
 @property (strong, nonatomic) NSMutableArray *titlesArray;
 @property (strong, nonatomic) NSMutableArray *dateArray;
@@ -28,8 +29,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (strong, nonatomic) NSMutableArray *passedArray;
 @property (strong,nonatomic) UIImage *thisSignatureImage;
-@property (weak, nonatomic) IBOutlet UITableView *completedView;
 
 - (IBAction)saveHoursPDF:(id)sender;
+- (IBAction)completedJobs:(id)sender;
 
 @end

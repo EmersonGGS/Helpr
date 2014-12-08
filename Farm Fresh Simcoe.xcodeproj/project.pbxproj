@@ -13,6 +13,10 @@
 		6354EE1018FB9810001A3924 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6354EE0F18FB9810001A3924 /* CoreData.framework */; };
 		636B7E081A008F4000111FDD /* SignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B7E071A008F4000111FDD /* SignatureViewController.m */; };
 		636B7E0B1A009A8000111FDD /* OngoingOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B7E0A1A009A8000111FDD /* OngoingOptionsViewController.m */; };
+		639DCC651A353A3200686B94 /* completed.png in Resources */ = {isa = PBXBuildFile; fileRef = 639DCC641A353A3200686B94 /* completed.png */; };
+		63C374C61A353E620015DEFD /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C374C51A353E620015DEFD /* back.png */; };
+		63C374C91A353F170015DEFD /* completedJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C374C81A353F170015DEFD /* completedJobsViewController.m */; };
+		63C374D91A3565B30015DEFD /* completedCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C374D81A3565B30015DEFD /* completedCheck.png */; };
 		6515F10E1A1CE8270011B0DB /* OngoingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6515F10D1A1CE8270011B0DB /* OngoingTableViewController.m */; };
 		653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 653CEA0D19F089F400E9A3FD /* helpr-logo.png */; };
 		653CEA1119F092F800E9A3FD /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653CEA1019F092F800E9A3FD /* ProfileViewController.m */; };
@@ -77,6 +81,11 @@
 		636B7E071A008F4000111FDD /* SignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignatureViewController.m; sourceTree = "<group>"; };
 		636B7E091A009A8000111FDD /* OngoingOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingOptionsViewController.h; sourceTree = "<group>"; };
 		636B7E0A1A009A8000111FDD /* OngoingOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OngoingOptionsViewController.m; sourceTree = "<group>"; };
+		639DCC641A353A3200686B94 /* completed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = completed.png; sourceTree = "<group>"; };
+		63C374C51A353E620015DEFD /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		63C374C71A353F170015DEFD /* completedJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = completedJobsViewController.h; sourceTree = "<group>"; };
+		63C374C81A353F170015DEFD /* completedJobsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = completedJobsViewController.m; sourceTree = "<group>"; };
+		63C374D81A3565B30015DEFD /* completedCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = completedCheck.png; sourceTree = "<group>"; };
 		6515F10C1A1CE8270011B0DB /* OngoingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingTableViewController.h; sourceTree = "<group>"; };
 		6515F10D1A1CE8270011B0DB /* OngoingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OngoingTableViewController.m; sourceTree = "<group>"; };
 		653CEA0D19F089F400E9A3FD /* helpr-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "helpr-logo.png"; sourceTree = "<group>"; };
@@ -177,6 +186,9 @@
 		653CEA0A19F085DB00E9A3FD /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				63C374D81A3565B30015DEFD /* completedCheck.png */,
+				63C374C51A353E620015DEFD /* back.png */,
+				639DCC641A353A3200686B94 /* completed.png */,
 				654D95B31A242FF500AFAC25 /* signatureLine.png */,
 				65F046D91A087D130053D4E1 /* send.png */,
 				659F2D3A1A06B0BB0059DF0C /* timeIcon.png */,
@@ -252,6 +264,8 @@
 				636B7E0A1A009A8000111FDD /* OngoingOptionsViewController.m */,
 				636B7E061A008F4000111FDD /* SignatureViewController.h */,
 				636B7E071A008F4000111FDD /* SignatureViewController.m */,
+				63C374C71A353F170015DEFD /* completedJobsViewController.h */,
+				63C374C81A353F170015DEFD /* completedJobsViewController.m */,
 				653CEA0F19F092F800E9A3FD /* ProfileViewController.h */,
 				653CEA1019F092F800E9A3FD /* ProfileViewController.m */,
 				F4EECF2C177C99F400778578 /* MainViewController.h */,
@@ -364,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C374D91A3565B30015DEFD /* completedCheck.png in Resources */,
 				F4EECF1C177C99F400778578 /* InfoPlist.strings in Resources */,
 				659F2D3D1A06B0BB0059DF0C /* timeIcon.png in Resources */,
 				973B257818FB192300640F96 /* savebtn.png in Resources */,
@@ -385,11 +400,13 @@
 				659F2D3F1A06B0BB0059DF0C /* locationIcon.png in Resources */,
 				F4EECF28177C99F400778578 /* Default-568h@2x.png in Resources */,
 				978ED69618F8A80F0062D5F7 /* index.png in Resources */,
+				639DCC651A353A3200686B94 /* completed.png in Resources */,
 				9746E51A18F9AA85000755DE /* bglog.png in Resources */,
 				973B257618FB023F00640F96 /* main.jpg in Resources */,
 				97C10EEE18F75ABB00D72764 /* season.png in Resources */,
 				F4EECF2B177C99F400778578 /* MainStoryboard.storyboard in Resources */,
 				65B998E019F725A900ED5913 /* JobTableViewCell.xib in Resources */,
+				63C374C61A353E620015DEFD /* back.png in Resources */,
 				659F2D1F1A0687190059DF0C /* cancel.png in Resources */,
 				97C10EEF18F75ABB00D72764 /* notseason.png in Resources */,
 				659F2D3E1A06B0BB0059DF0C /* calendarIcon.png in Resources */,
@@ -410,6 +427,7 @@
 				F4D9AD1F1871725500E2D912 /* SWRevealViewController.m in Sources */,
 				F4EECF1E177C99F400778578 /* main.m in Sources */,
 				65EAF80119F9B77700A0594B /* JobsTableViewController.m in Sources */,
+				63C374C91A353F170015DEFD /* completedJobsViewController.m in Sources */,
 				F4EECF22177C99F400778578 /* AppDelegate.m in Sources */,
 				636B7E0B1A009A8000111FDD /* OngoingOptionsViewController.m in Sources */,
 				636B7E081A008F4000111FDD /* SignatureViewController.m in Sources */,
