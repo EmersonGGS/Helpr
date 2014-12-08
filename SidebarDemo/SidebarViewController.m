@@ -30,7 +30,8 @@
 {
     [super viewDidLoad];
       self.view.backgroundColor = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1];
-     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    // This will remove extra separators from tableview
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     menuItems = @[@"profile", @"jobs", @"myjobs"];
     [UIImage imageNamed:@"helpr-logo.png"];

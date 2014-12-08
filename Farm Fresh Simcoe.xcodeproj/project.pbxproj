@@ -13,6 +13,9 @@
 		6354EE1018FB9810001A3924 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6354EE0F18FB9810001A3924 /* CoreData.framework */; };
 		636B7E081A008F4000111FDD /* SignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B7E071A008F4000111FDD /* SignatureViewController.m */; };
 		636B7E0B1A009A8000111FDD /* OngoingOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B7E0A1A009A8000111FDD /* OngoingOptionsViewController.m */; };
+		639C50A31A35987C00F7D981 /* findJobs.png in Resources */ = {isa = PBXBuildFile; fileRef = 639C50A01A35987C00F7D981 /* findJobs.png */; };
+		639C50A41A35987C00F7D981 /* myJobs.png in Resources */ = {isa = PBXBuildFile; fileRef = 639C50A11A35987C00F7D981 /* myJobs.png */; };
+		639C50A51A35987C00F7D981 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 639C50A21A35987C00F7D981 /* profile.png */; };
 		639DCC651A353A3200686B94 /* completed.png in Resources */ = {isa = PBXBuildFile; fileRef = 639DCC641A353A3200686B94 /* completed.png */; };
 		63C374C61A353E620015DEFD /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C374C51A353E620015DEFD /* back.png */; };
 		63C374C91A353F170015DEFD /* completedJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C374C81A353F170015DEFD /* completedJobsViewController.m */; };
@@ -81,6 +84,9 @@
 		636B7E071A008F4000111FDD /* SignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignatureViewController.m; sourceTree = "<group>"; };
 		636B7E091A009A8000111FDD /* OngoingOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingOptionsViewController.h; sourceTree = "<group>"; };
 		636B7E0A1A009A8000111FDD /* OngoingOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OngoingOptionsViewController.m; sourceTree = "<group>"; };
+		639C50A01A35987C00F7D981 /* findJobs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findJobs.png; sourceTree = "<group>"; };
+		639C50A11A35987C00F7D981 /* myJobs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myJobs.png; sourceTree = "<group>"; };
+		639C50A21A35987C00F7D981 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		639DCC641A353A3200686B94 /* completed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = completed.png; sourceTree = "<group>"; };
 		63C374C51A353E620015DEFD /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		63C374C71A353F170015DEFD /* completedJobsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = completedJobsViewController.h; sourceTree = "<group>"; };
@@ -186,6 +192,9 @@
 		653CEA0A19F085DB00E9A3FD /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				639C50A01A35987C00F7D981 /* findJobs.png */,
+				639C50A11A35987C00F7D981 /* myJobs.png */,
+				639C50A21A35987C00F7D981 /* profile.png */,
 				63C374D81A3565B30015DEFD /* completedCheck.png */,
 				63C374C51A353E620015DEFD /* back.png */,
 				639DCC641A353A3200686B94 /* completed.png */,
@@ -387,10 +396,13 @@
 				978ED69818F8B0EA0062D5F7 /* Logofarm-1.png in Resources */,
 				653CEA0E19F089F400E9A3FD /* helpr-logo.png in Resources */,
 				9746E51C18F9ACA8000755DE /* signUp.png in Resources */,
+				639C50A41A35987C00F7D981 /* myJobs.png in Resources */,
 				659F2D311A069A270059DF0C /* pen.png in Resources */,
 				654D95B41A242FF500AFAC25 /* signatureLine.png in Resources */,
 				630AB2181A0578AF00671068 /* acceptBtn.png in Resources */,
+				639C50A51A35987C00F7D981 /* profile.png in Resources */,
 				630AB2191A0578AF00671068 /* cancelBtn.png in Resources */,
+				639C50A31A35987C00F7D981 /* findJobs.png in Resources */,
 				9746E51E18F9AE93000755DE /* backbtn.png in Resources */,
 				973B257218FAF2CE00640F96 /* leftLogo.png in Resources */,
 				65F046DA1A087D130053D4E1 /* send.png in Resources */,
