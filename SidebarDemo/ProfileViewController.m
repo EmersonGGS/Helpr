@@ -302,7 +302,15 @@
     
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"completedJobs"]) {
+    }
+}
+
+
 - (IBAction)completedJobs:(id)sender {
+    
+    [self performSegueWithIdentifier: @"completedJobs" sender: self];
 }
 
 - (void)setupPDFDocumentNamed:(NSString*)name Width:(float)width Height:(float)height {

@@ -598,7 +598,6 @@
                                 </state>
                                 <connections>
                                     <action selector="completedJobs:" destination="5rY-od-6Ug" eventType="touchUpInside" id="Jqa-Az-ajO"/>
-                                    <segue destination="EqU-Jd-1kp" kind="modal" identifier="completedModal" id="p45-96-Zy1"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="completed.png" translatesAutoresizingMaskIntoConstraints="NO" id="wes-2E-QXW">
@@ -613,6 +612,7 @@
                         <outlet property="hoursCompleted" destination="4pl-Va-2v6" id="thr-4h-x4y"/>
                         <outlet property="username" destination="JK4-ze-qZr" id="Zl8-v4-NHy"/>
                         <outlet property="volunteerForm" destination="Aet-xA-buV" id="3OD-Oa-3jN"/>
+                        <segue destination="EqU-Jd-1kp" kind="modal" identifier="completedJobs" id="fTY-c5-Yn1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvm-ba-PJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -648,7 +648,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0jc-WM-nYp">
-                                <rect key="frame" x="0.0" y="59" width="320" height="412"/>
+                                <rect key="frame" x="0.0" y="59" width="320" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </scrollView>
                         </subviews>

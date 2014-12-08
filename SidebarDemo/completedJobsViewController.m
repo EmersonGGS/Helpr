@@ -26,10 +26,11 @@ int totalObjects = 0;
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+-(void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    currentCount = 0;
+    totalObjects = 0;
     
     _backBtn.backgroundColor = [UIColor colorWithRed:0.173 green:0.243 blue:0.314 alpha:1];
     _backBtn.layer.cornerRadius = 5;
@@ -48,7 +49,7 @@ int totalObjects = 0;
             // The find succeeded.
             NSLog(@"Successfully retrieved %d objects.", objects.count);
             int totalObjects = objects.count;
-            CGSize scrollViewContentSize = CGSizeMake(320, 60*totalObjects);
+            CGSize scrollViewContentSize = CGSizeMake(320, (60+60*totalObjects));
             [self.mainScrollView setContentSize:scrollViewContentSize];
             // Do something with the found objects
             for (PFObject *object in objects) {
@@ -57,7 +58,7 @@ int totalObjects = 0;
                     UIView *completedSubView = [[UIView alloc] initWithFrame: CGRectMake ( 0, 0, 420, 60)];
                     completedSubView.backgroundColor = [UIColor colorWithRed:0.31 green:0.373 blue:0.435 alpha:1] /*#4f5f6f*/;
                     
-                    UIImageView *check =[[UIImageView alloc] initWithFrame:CGRectMake(10,10,20,20)];
+                    UIImageView *check =[[UIImageView alloc] initWithFrame:CGRectMake(10,20,20,20)];
                     check.image=[UIImage imageNamed:@"completedCheck.png"];
                     check.contentMode = UIViewContentModeScaleAspectFit;
                     [completedSubView addSubview:check];
@@ -101,7 +102,7 @@ int totalObjects = 0;
                     UIView *completedSubView = [[UIView alloc] initWithFrame: CGRectMake ( 0, 0+(65*currentCount), 420, 60)];
                     completedSubView.backgroundColor = [UIColor colorWithRed:0.31 green:0.373 blue:0.435 alpha:1] /*#4f5f6f*/;
                     
-                    UIImageView *check =[[UIImageView alloc] initWithFrame:CGRectMake(10,10,20,20)];
+                    UIImageView *check =[[UIImageView alloc] initWithFrame:CGRectMake(10,20,20,20)];
                     check.image=[UIImage imageNamed:@"completedCheck.png"];
                     check.contentMode = UIViewContentModeScaleAspectFit;
                     [completedSubView addSubview:check];
@@ -152,13 +153,20 @@ int totalObjects = 0;
     
     self.mainScrollView.delegate = self;
     self.mainScrollView.scrollEnabled = YES;
+    
 }
+
+- (IBAction)closeModal:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation
@@ -171,7 +179,5 @@ int totalObjects = 0;
 }
 */
 
-- (IBAction)closeModal:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 @end
